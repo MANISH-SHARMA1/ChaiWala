@@ -1,0 +1,17 @@
+.footer {
+  background-color: #ff1493;
+  .content {
+    margin-left: 13vw;
+    .block {
+      display: inline-table;
+      margin-right: 10vw;
+      color: white;
+      h1 {
+        color: #ece666;
+      }
+      li {
+        list-style: none;
+      }
+    }
+  }
+}
