@@ -1,0 +1,20 @@
+.bonding {
+  background-color: yellow;
+  padding: 10px;
+  margin-top: -4px;
+  text-align: center;
+  font-size: 1.3rem;
+  .img {
+    height: 60px;
+    width: 60px;
+  }
+  .bond {
+    display: inline;
+    color: rgba(0, 0, 0, 0.612);
+    padding-left: 5vw;
+    padding-right: 5vw;
+    span {
+      color: #ff1493;
+    }
+  }
+}

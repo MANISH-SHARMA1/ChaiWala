@@ -1,7 +1,31 @@
 .story {
   background-color: #fdf105;
-  padding: 5px;
-  p {
-    color: rgba(0, 0, 0, 0.671);
+  padding-left: 10vw;
+  .Story {
+    display: inline-block;
+    p {
+      width: 40vw;
+      color: rgba(0, 0, 0, 0.671);
+      font-size: 1.1rem;
+    }
+    img {
+      width: 25vw;
+      height: 30vh;
+      padding-left: 10vw;
+    }
+    .horizontal {
+      background-color: #ff1493;
+      width: 40vw;
+      text-align: center;
+      border-radius: 5px;
+      p {
+        color: white;
+        padding: 5px;
+      }
+    }
+   
   }
 }
+
+
+

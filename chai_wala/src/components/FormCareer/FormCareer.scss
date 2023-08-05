@@ -1,0 +1,60 @@
+.formpage {
+  text-align: center;
+  background-color: gray;
+  font-size: 1.2rem;
+  padding: 5vh 0;
+
+  h1 {
+    color: rgb(237, 237, 25);
+  }
+  .horizontal {
+    background-color: rgb(237, 237, 25);
+    width: 14vw;
+    height: 1.5vh;
+    margin-left: 42.6vw;
+    margin-top: -20px;
+  }
+
+  .form {
+    text-align: left;
+    padding-top: 5vh;
+    padding-left: 10vw;
+    color: #ff1493;
+    .Box {
+      display: inline-block;
+      .labelFirst {
+        display: block;
+        padding: 15px 0px 0px;
+      }
+      .labelSecond {
+        display: block;
+        padding: 15px 0px 0px;
+      }
+      .input {
+        width: 20vw;
+        padding: 10px;
+        border: none;
+        border-radius: 0px 15px 15px;
+      }
+    }
+    .box {
+      margin-left: 20vw;
+    }
+
+    .thirdBox {
+      .button {
+        margin-left: 30vw;
+        width: 20vw;
+        padding: 15px;
+        background-color: #ff1493;
+        color: yellow;
+        border: solid 1px yellow;
+        border-radius: 10px;
+        font-size: 1.2rem;
+      }
+      .button:hover {
+        cursor: pointer;
+      }
+    }
+  }
+}

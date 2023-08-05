@@ -1,13 +1,35 @@
-.introduction{
-    background-color: #ff1493;
-    padding: 5px;
-    h5{
-        color: white;
+.introduction {
+  background-color: #ff1493;
+  padding-left: 10vw;
+padding-bottom: 28vh;
+  .intro {
+    padding-top: 20px;
+    display: inline-block;
+    img {
+      width: 37vw;
+      height: 109vh;
+      margin-bottom: -33vh;
     }
-    h1{
-        color: #ece666;
+    h4 {
+      color: white;
     }
-    p{
-        color: white;
+    h1 {
+      color: #ece666;
+      font-size: 2.5rem;
+      margin: -20px 0px 5px;
     }
+    .horizontal{
+        width: 15vw;
+        height: 1vh;
+        background-color: white;
+        margin-top: -1vh;
+    }
+    p {
+      color: white;
+      width: 40vw;
+      }
+  }
+  .Intro{
+    padding-left: 5vw;
+  }
 }

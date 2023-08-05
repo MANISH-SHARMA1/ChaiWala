@@ -1,0 +1,82 @@
+.venture {
+  padding-top: 9vh;
+  .top {
+    padding-left: 10vw;
+    padding-right: 10vw;
+    h1 {
+      color: #ff1493;
+      font-size: 2.5rem;
+      margin-bottom: -10px;
+    }
+    p {
+        font-size: 1.1rem;
+      span {
+        color: rgba(0, 0, 0, 0.671);
+      }
+    }
+  }
+
+  .iTea {
+    background-color: #ff1493;
+    padding-left: 10vw;
+    padding-bottom: 4vh;
+    .Tea {
+      width: 40vw;
+      h1 {
+        color: yellow;
+      }
+      p {
+        color: white;
+      }
+    }
+
+    .tea {
+      display: inline-block;
+      .img {
+        height: 160px;
+        width: 250px;
+        padding-left: 15vw;
+      }
+    }
+  }
+
+  .riddhidev {
+    padding-left: 10vw;
+    padding-bottom: 2vh;
+    .riddhiPara {
+      width: 40vw;
+      padding-left: 20vw;
+      h1 {
+        color: red;
+      }
+    }
+    .riddhi {
+      display: inline-block;
+      img {
+        height: 200px;
+        width: 250px;
+      }
+    }
+  }
+
+  .beans {
+    background-color: #2d1f00;
+    color: white;
+
+    .darkBeans {
+      display: inline-block;
+      .beansDesc {
+        padding-left: 10vw;
+        width: 40vw;
+        padding-right: 15vw;
+        p {
+          font-size: 1.1rem;
+        }
+      }
+      img {
+        height: 195px;
+        width: 195px;
+      }
+    }
+  }
+}

@@ -1,0 +1,49 @@
+.cafe {
+  margin-top: 5vh;
+  text-align: center;
+  padding-bottom: 10vh;
+  background-color: #ff1493;
+
+  h1 {
+    color: white;
+    font-size: 2.5rem;
+    margin: -7vh 0 -5vh;
+  }
+
+  .img {
+    display: inline-block;
+    margin-top: 10vh;
+    margin-left: 2vw;
+    border: solid 2px yellow;
+    border-radius: 16px;
+    overflow: hidden;
+
+    img {
+      width: 500px;
+      height: 280px;
+      border-radius: 15px 15px 0 0;
+      transition: transform 0.4s;
+    }
+    img:hover {
+      transform: scale(1.17);
+    }
+    .desc {
+      background-color: yellow;
+      position: relative;
+      margin: 6px 20px 0;
+      border-radius: 10px;
+
+      h1 {
+        color: #ff1493;
+        border-radius: 5px;
+        font-size: 1.7rem;
+        padding: 10px;
+      }
+    }
+    h3 {
+      color: white;
+      padding-top: 15px;
+      font-size: 1.6rem;
+    }
+  }
+}

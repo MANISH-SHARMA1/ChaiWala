@@ -1,0 +1,34 @@
+.brandPartners {
+  padding-top: 5vh;
+  .brand {
+    padding-left: 10vw;
+    display: inline-block;
+    .Brand {
+      width: 45vw;
+      margin-left: -6vw;
+      font-size: 1.2rem;
+      h1 {
+        color: #ff1493;
+        margin-top: -3vh;
+        margin-bottom: -3vh;
+      }
+      .horizontal {
+        width: 14vw;
+        height: 0.7vh;
+        background-color: yellow;
+      }
+      .horizontal:hover {
+        background-color: rgba(0, 0, 0, 0.671);
+      }
+      p {
+        span {
+          color: rgba(0, 0, 0, 0.671);
+        }
+      }
+    }
+    img {
+      width: 370px;
+      height: 410px;
+    }
+  }
+}

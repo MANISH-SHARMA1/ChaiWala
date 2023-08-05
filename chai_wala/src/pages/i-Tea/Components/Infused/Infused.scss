@@ -1,0 +1,33 @@
+.infused {
+  padding: 5vh 10vw;
+  .border {
+    border: 5px solid #ff1493;
+    border-radius: 15px;
+    .Infused {
+      display: inline-block;
+      padding-bottom: 5vh;
+
+      img {
+        width: 37vw;
+        height: 80vh;
+        padding-left: 3vw;
+        border-radius: 15px;
+      }
+    }
+    .desc {
+      width: 30vw;
+      padding-left: 10%;
+
+      h1 {
+        color: #ff1493;
+        margin: -2vh 0;
+        font-size: 2.6rem;
+      }
+      p {
+        color: rgba(0, 0, 0, 0.549);
+        font-size: 1.1rem;
+        padding-top: 5vh;
+      }
+    }
+  }
+}

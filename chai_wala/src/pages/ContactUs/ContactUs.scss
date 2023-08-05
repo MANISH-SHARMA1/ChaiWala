@@ -1,0 +1,64 @@
+.Top {
+  padding-top: 9vh;
+  .top {
+    padding: 10vh 10vw;
+    text-align: center;
+    background-color: yellow;
+    h1 {
+      color: #ff1493;
+    }
+    p {
+      color: rgba(0, 0, 0, 0.505);
+      font-size: 1.2em;
+    }
+    .button {
+      padding-top: 5vh;
+      .btn {
+        padding: 15px;
+        display: inline;
+        border: solid 2px #ff1493;
+        text-align: center;
+        color: #ff1493;
+        font-size: 1.2em;
+      }
+      .btn:hover {
+        cursor: pointer;
+      }
+      .bttn {
+        margin: 0 10vw;
+      }
+    }
+  }
+
+  .contact {
+    color: white;
+    text-align: center;
+    padding: 10vh 10vw;
+    background-color: #ff1493;
+    .heading {
+      border-radius: 5px;
+      background-color: white;
+      width: 10vw;
+      margin: auto;
+      padding: 0px 20px;
+      margin-bottom: 10vh;
+
+      h1 {
+        color: #ff1493;
+        margin: -5px 0;
+      }
+    }
+    p {
+      font-size: 1.2em;
+      padding: 0 0 10vh;
+    }
+    .address{
+      padding: 0 25vw;
+    }
+    .iconn{
+      font-size: 2em;
+
+      // margin: -5vh, 0;
+    }
+  }
+}

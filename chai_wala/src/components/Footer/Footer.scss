@@ -1,7 +1,8 @@
 .footer {
   background-color: #ff1493;
+  padding-bottom: 10vh;
   .content {
-    margin-left: 13vw;
+    padding-left: 10vw;
     .block {
       display: inline-table;
       margin-right: 10vw;
@@ -11,6 +12,24 @@
       }
       li {
         list-style: none;
+      }
+      span {
+        color: yellow;
+        font-size: 2em;
+        padding-right: 15px;
+        margin-left: -45px;
+      }
+      #ull{
+        margin-left: -40px;
+        padding-bottom: 5px;
+      }
+      #ul {
+        margin-left: -45px;
+      }
+      #li {
+        display: inline;
+        padding: 0 10px 0 0;
+        font-size: 2.3em;
       }
     }
   }

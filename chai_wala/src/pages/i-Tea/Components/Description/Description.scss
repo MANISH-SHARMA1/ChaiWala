@@ -1,0 +1,40 @@
+.description {
+    padding: 10vh 10vw;
+  .desc {
+    display: inline-block;
+    h1 {
+      color: #ff1493;
+      margin: -1vh 0;
+    }
+    p {
+      color: rgba(0, 0, 0, 0.549);
+      font-size: 1.1em;
+    }
+    img {
+      height: 50vh;
+      width: 40vw;
+    //   padding-left: 1vw;
+    }
+  }
+  .DESC{
+    width: 35vw;
+  }
+  .about {
+    display: inline-block;
+    img {
+      height: 70vh;
+      width: 33vw;
+      
+    }
+    h1 {
+      color: #ff1493;
+    }
+    p {
+      color: rgba(0, 0, 0, 0.549);
+    }
+  }
+  .ABOUT{
+    width: 30vw;
+    padding-left: 10vw;
+  }
+}

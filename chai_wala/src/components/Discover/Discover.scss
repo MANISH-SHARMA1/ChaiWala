@@ -1,0 +1,64 @@
+.discover {
+  position: absolute;
+  text-align: center;
+  padding: 1vh 10vw 0vh;
+  background-color: yellow;
+  h1 {
+    color: #ff1493;
+  }
+  .horizontal {
+    height: 0.5vh;
+    width: 10vw;
+    background-color: rgba(0, 0, 0, 0.671);
+    margin: -2vh 0 -2vh 34.5vw;
+  }
+  h4 {
+    color: rgba(0, 0, 0, 0.671);
+  }
+  img {
+    width: 80vw;
+    height: 100vh;
+    background-color: white;
+    padding: 25px 10px;
+    border-radius: 25px;
+  }
+}
+
+.treat {
+  background-color: white;
+
+  padding: 0 10vw 10vh;
+
+  .Treat {
+    margin-top: 123vh;
+    position: relative;
+    z-index: 1;
+
+    img {
+      width: 30vw;
+      height: 70vh;
+    }
+    display: inline-block;
+    h1 {
+      color: #ff1493;
+      margin: -1vh 0;
+    }
+    p {
+      width: 40vw;
+    }
+    .image {
+      display: inline;
+
+      img {
+        height: 13vh;
+        width: 13vw;
+      }
+    }
+    .img {
+      padding-left: 60px;
+    }
+  }
+  .treet{
+    padding-left: 8.6vw;
+  }
+}

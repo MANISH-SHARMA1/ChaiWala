@@ -1,0 +1,29 @@
+.Cart {
+  padding-top: 9vh;
+  .cart {
+    padding: 5vh 10vw 30vh;
+    h1 {
+      font-size: 2.5em;
+      color: #ff1493;
+      // font-weight: 600/;
+    }
+    .container {
+      background-color: #ff1493;
+      p {
+        color: white;
+        font-size: 1.2em;
+        padding: 15px;
+      }
+    }
+    .btn {
+      text-align: center;
+      border: 2px solid #ff1493;
+      padding: 15px;
+      font-weight: 600;
+      color: #ff1493;
+      width: 15vw;
+      margin-top: 3vw;
+      font-size: 1.3em;
+    }
+  }
+}

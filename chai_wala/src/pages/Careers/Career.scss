@@ -1,0 +1,27 @@
+.careers {
+  .careerTop {
+    text-align: center;
+    font-size: 1.2rem;
+    padding-top: 5vh;
+    h2,
+    h1 {
+      color: #ff1493;
+      margin: -10px 0px;
+    }
+    h3{
+        color: rgba(0, 0, 0, 0.549);
+    }
+    .horizontal {
+      background-color: rgba(227, 227, 35, 0.684);
+      width: 14vw;
+      height: 1.5vh;
+      margin-left: 42.6vw;
+      margin-top: 15px;
+    }
+    p{
+        color: rgba(0, 0, 0, 0.549);
+        padding: 0px 130px;
+        font-size: 1.2rem;
+    }
+  }
+}

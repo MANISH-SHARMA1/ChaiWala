@@ -1,0 +1,48 @@
+.tea {
+  text-align: center;
+  h1 {
+    color: #ff1493;
+    font-size: 2.7rem;
+  }
+  h6 {
+    color: rgba(0, 0, 0, 0.505);
+    margin: -6vh 0 2vh;
+    font-size: 1.1rem;
+  }
+  .horizontal {
+    background-color: #ff1493;
+    height: 0.3vh;
+    width: 40vw;
+    margin-left: 31vw;
+  }
+  .imgContainer {
+    background-size: cover;
+    cursor: pointer;
+    display: inline-block;
+    border-radius: 25px;
+    width: 300px;
+    height: 300px;
+    margin: 25px 20px;
+    box-shadow: 5px 5px 2px 0px rgba(0,0,0,0.3);
+
+    .content {
+      margin-top: 310px;
+      #name {
+        color: rgba(0, 0, 0, 0.721);
+        font-size: 20px;
+      }
+      h4 {
+        color: #ff1493;
+        font-size: 20px;
+        margin: 1vh;
+      }
+      p {
+        color: white;
+        padding: 5px;
+        background-color: #ff1493;
+        border-radius: 15px;
+      }
+    }
+  }
+  
+}

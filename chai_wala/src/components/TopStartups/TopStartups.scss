@@ -1,0 +1,30 @@
+.startups {
+  background-color: yellow;
+  text-align: center;
+  .container {
+    display: inline-block;
+  margin: -5vh 0 -2.5vh;
+
+    h1 {
+      color: #ff1493;
+      margin-bottom: -7vh;
+      font-size: 4.5rem;
+    }
+    h5 {
+      color: rgba(0, 0, 0, 0.505);
+      font-size: 1.1rem;
+      margin-left: -1.3vw;
+    }
+    .img {
+      background-color: white;
+      padding: 7px 0px;
+      border-radius: 146px;
+      margin: 1vh 10vw;
+      img {
+        height: 100px;
+        width: 125px;
+        padding: 1vh 5vw 0;
+      }
+    }
+  }
+}

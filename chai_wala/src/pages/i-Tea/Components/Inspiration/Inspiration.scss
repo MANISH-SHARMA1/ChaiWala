@@ -1,0 +1,60 @@
+.inspiration {
+  background-color: rgba(145, 140, 140, 0.103);
+  font-size: 1.3rem;
+  text-align: center;
+  padding: 15vh 0;
+  h1{
+    margin: -2vh 0 0;
+  }
+  .first {
+    color: rgb(94, 90, 90);
+  }
+  .second {
+    color: #ff1493;
+padding-bottom: 5vh;
+  }
+  .yt{
+    border-radius: 35px;
+  }
+}
+
+.flavors {
+    // text-align: center;
+    padding-top: 15vh;
+    h1 {
+      color: #ff1493;
+      background-color: yellow;
+    }
+    span {
+      color: gray;
+    }
+    .imgContainer {
+      background-size: cover;
+      cursor: pointer;
+      display: inline-block;
+      border-radius: 25px;
+      width: 300px;
+      height: 300px;
+      margin: 25px 20px;
+      box-shadow: 5px 5px 2px 0px rgba(0, 0, 0, 0.3);
+  
+      .content {
+        margin-top: 310px;
+        #name {
+          color: rgba(0, 0, 0, 0.721);
+          font-size: 20px;
+        }
+        h4 {
+          color: #ff1493;
+          font-size: 20px;
+          margin: 1vh;
+        }
+        p {
+          color: white;
+          padding: 5px;
+          background-color: #ff1493;
+          border-radius: 15px;
+        }
+      }
+    }
+  }

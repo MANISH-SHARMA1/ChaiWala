@@ -1,16 +1,35 @@
 .coFounder {
   background-color: #ece666;
-  color: rgba(0, 0, 0, 0.671);
-  padding: 5px;
-  h1{
-    color: #ff1493;
+  padding-left: 10vw;
+  .cofounder {
+    color: rgba(0, 0, 0, 0.671);
+    display: inline-block;
+    h1 {
+      color: #ff1493;
+      font-size: 2.4rem;
+    }
+    h3 {
+      color: rgba(0, 0, 0, 0.549);
+      font-size: 1.4rem;
+      margin: -20px 0px 20px;
+    }
+    .horizontal {
+      height: 1vh;
+      width: 28vw;
+      background-color: #ff1493;
+    }
+    p {
+      width: 42vw;
+      padding-top: 3vh;
+    }
+    span {
+      color: rgb(0, 0, 0);
+    }
+    img {
+      width: 30vw;
+      height: 100vh;
+      margin-left: 5vw;
+    }
   }
-  h3{
-    color: rgba(0, 0, 0, 0.549);
-  }
-  span{
-    color: rgb(0, 0, 0);
 
-
-  }
 }

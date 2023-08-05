@@ -1,0 +1,64 @@
+.enquiry {
+  background-color: rgba(0, 0, 0, 0.549);
+  padding: 5vh 0;
+  h1 {
+    color: white;
+    text-align: center;
+    span {
+      color: yellow;
+    }
+  }
+  .form {
+    color: #ff1493;
+    padding-left: 10vw;
+    font-size: 1.2rem;
+
+    .formOne {
+      display: inline-block;
+    }
+    .formTwo {
+      padding-left: 5vw;
+    }
+    .boxOne {
+      display: block;
+      padding: 15px 0px 0px;
+    }
+    .input {
+      width: 20vw;
+      padding: 10px;
+      border: none;
+      border-radius: 0px 15px 15px;
+    }
+    .bigInput {
+        width: 40vw;
+      }
+    .boxTwo {
+      display: block;
+      padding: 15px 0px 0px;
+    }
+    .input {
+      width: 20vw;
+      padding: 10px;
+      border: none;
+      border-radius: 0px 15px 15px;
+    }
+    .bigInput {
+      width: 35vw;
+    }
+    .thirdBox {
+        padding: 20px 30vw;
+      .button {
+        width: 20vw;
+        padding: 15px;
+        background-color: #ff1493;
+        color: yellow;
+        border: solid 1px yellow;
+        border-radius: 10px;
+        font-size: 1.2rem;
+      }
+      .button:hover {
+        cursor: pointer;
+      }
+    }
+  }
+}

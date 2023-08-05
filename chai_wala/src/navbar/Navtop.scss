@@ -1,0 +1,30 @@
+.navTop {
+  margin-left: 15.6vw;
+  padding-bottom: 6.8vh;
+  text-align: center;
+  .topp {
+    background-color: white;
+    position: fixed;
+    z-index: 1;
+    .vertical {
+      background-color: #ff1493;
+      height: 41px;
+      width: 4px;
+    }
+    #top {
+      display: inline-block;
+      #icon {
+        color: #ff1493;
+        font-size: 2em;
+        padding-right: 1vw;
+      }
+    }
+    p {
+      padding: 0 8vw;
+      //   margin-bottom: 5vh;
+      margin-top: 0vh;
+      font-weight: 700;
+      font-size: 1.1em;
+    }
+  }
+}

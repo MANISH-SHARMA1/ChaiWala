@@ -1,0 +1,98 @@
+.fullPage {
+  padding-top: 9vh;
+  .page {
+    background-color: rgb(101, 101, 101);
+    color: white;
+    padding-bottom: 5vh;
+    padding-left: 10vw;
+    padding-top: 10vh;
+    .formPage {
+      display: inline-block;
+      h1 {
+        color: yellow;
+      }
+      .horizontal {
+        background-color: yellow;
+        height: 0.7vh;
+        width: 16vw;
+      }
+
+      img {
+        width: 20vw;
+        height: 130vh;
+        padding-bottom: 5vh;
+      }
+      .form {
+        .padding {
+          padding: 10px 30px 10px 0px;
+        }
+        .frm {
+          display: block;
+        }
+        .input {
+          height: 3vh;
+          border: none;
+          border-radius: 0px 10px 10px;
+          padding: 15px;
+        }
+        label {
+          padding-bottom: 5px;
+        }
+        .select {
+          height: 8vh;
+        }
+        #name {
+          width: 44vw;
+          border-radius: 0px, 15px, 15px;
+        }
+        .box {
+          display: block;
+
+          .firstBox {
+            display: inline-block;
+            .frm {
+              width: 19.7vw;
+            }
+          }
+          .secondBox {
+            display: inline-block;
+            .frm {
+              width: 13.2vw;
+            }
+          }
+          .thirdBox {
+            display: inline-block;
+            .frm {
+              width: 13vw;
+            }
+            #city {
+              width: 11vw;
+            }
+          }
+        }
+        #question {
+          width: 45vw;
+          height: 35vh;
+          padding: 10px;
+          border: none;
+          border-radius: 0px 10px 10px;
+        }
+        .submit {
+          width: 46.7vw;
+          padding: 15px;
+          background-color: #ff1493;
+          color: yellow;
+          border: solid 1px yellow;
+          border-radius: 10px;
+          font-size: 1.2rem;
+        }
+        .submit:hover {
+          cursor: pointer;
+        }
+      }
+    }
+    .Form {
+      padding-left: 12vw;
+    }
+  }
+}

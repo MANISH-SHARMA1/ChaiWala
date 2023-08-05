@@ -1,0 +1,21 @@
+.journey {
+  text-align: center;
+  color: #ff1493;
+  font-size: 1.2rem;
+  padding: 0vh 10vw 10vh;
+
+  span {
+    color: rgba(0, 0, 0, 0.505);
+  }
+  .container {
+    height: 0.5vh;
+    width: 13vw;
+    background-color: #ff1493;
+    margin: -2vh 0 2vh 33vw;
+  }
+  img {
+    width: 80vw;
+    height: 70vh;
+    margin-top: -6vh;
+  }
+}
