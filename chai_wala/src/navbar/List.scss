@@ -1,0 +1,36 @@
+.list {
+  z-index: 1;
+  position: fixed;
+  margin-top: 28vh;
+  .listNav {
+    background-color: #ff1493;
+    margin: -2.7vh 10vw 0 10vw;
+    height: 72vh;
+    width: 80vw;
+    transition: height 10s ease-in-out;
+
+    .listNavbar {
+      ul {
+        margin-right: 5vw;
+        list-style: none;
+        padding-top: 10vh;
+        li {
+          padding: 10px 25px;
+          .listLink {
+            text-decoration: none;
+            color: white;
+            font-weight: 600;
+          }
+          .listLink:hover {
+            color: yellow;
+          }
+        }
+        li:hover {
+          background-color: #ec218d;
+          color: whitesmoke;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}

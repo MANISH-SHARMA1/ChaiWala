@@ -2,12 +2,23 @@ import "./Navbar.scss";
 import { Outlet, Link } from "react-router-dom";
 import Navtop from "./Navtop";
 import logo from "../Assets/navbar/logo.png";
+import List from "./List";
+import { useState } from "react";
 const Navbar = () => {
+  const [display, setDisplay] = useState(false);
+  function list() {
+    display ? setDisplay(false) : setDisplay(<List />);
+  }
   return (
     <>
       <Navtop />
       <div className="nav">
         <nav className="navbar">
+          <div className="container" onClick={list}>
+            <div className="vertical"></div>
+            <div className="vertical"></div>
+            <div className="vertical"></div>
+          </div>
           <ul>
             <li>
               <Link className="link" to="/">
@@ -40,14 +51,15 @@ const Navbar = () => {
               </Link>
             </li>
             <img
+              className="img"
               src={logo}
               alt=""
-              style={{
-                width: "75px",
-                height: "54px",
-                zIndex: "1",
-                margin: "-21px 0",
-              }}
+              // style={{
+              //   width: "75px",
+              //   height: "54px",
+              //   zIndex: "1",
+              //   margin: "-21px 0",
+              // }}
             />
             <li>
               <Link className="link" to="/i_tea">
@@ -76,6 +88,7 @@ const Navbar = () => {
             </li>
           </ul>
         </nav>
+        <div className="mobileNav">{display}</div>
       </div>
       <Outlet />
     </>

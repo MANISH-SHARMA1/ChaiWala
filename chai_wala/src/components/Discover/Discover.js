@@ -20,11 +20,11 @@ function Discover() {
           <img src={scooty} alt="" />
         </div>
         <div className="Treat treet">
-          <h1>Here's a treat for your</h1>
-          <h1>taste buds!</h1>
-          <h1>Feeling too lazy to step</h1>
-          <h1>out?</h1>
-          <h1>Sit back and Relax!</h1>
+          <h1>
+            Here's a treat for your taste buds! Feling too lazy to step out? Sit
+            back and relax!
+          </h1>
+
           <p>
             We are dedicated to satisfying your cravings with an extensive range
             of high-quality, delicious snacks and beverages. With our convenient

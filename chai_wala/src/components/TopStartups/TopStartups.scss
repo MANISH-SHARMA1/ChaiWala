@@ -3,7 +3,7 @@
   text-align: center;
   .container {
     display: inline-block;
-  margin: -5vh 0 -2.5vh;
+    margin: -5vh 0 -2.5vh;
 
     h1 {
       color: #ff1493;
@@ -25,6 +25,25 @@
         width: 125px;
         padding: 1vh 5vw 0;
       }
+    }
+  }
+}
+
+@media only screen and (max-width: 980px) {
+  .startups {
+    margin-top: -8.2vh;
+    .container {
+      display: block;
+
+      .img {
+        img {
+          height: 270px;
+          width: 250px;
+        }
+      }
+    }
+    .Content {
+      padding-bottom: 2vh;
     }
   }
 }

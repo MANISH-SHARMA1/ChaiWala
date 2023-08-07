@@ -6,7 +6,7 @@ function TopStartups() {
   return (
     <>
       <div className="startups">
-        <div className="container">
+        <div className="container Content">
           <h1>100+</h1>
           <h5>Outlets Serving</h5>
         </div>
@@ -15,7 +15,7 @@ function TopStartups() {
             <img src={startups} alt="topStartupsImg" />
           </div>
         </div>
-        <div className="container">
+        <div className="container Content">
           <h1>150+</h1>
           <h5>Brand Partners</h5>
         </div>
