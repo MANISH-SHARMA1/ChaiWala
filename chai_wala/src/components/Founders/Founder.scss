@@ -1,6 +1,6 @@
 .founder {
   padding: 5vh 10vw 10vh;
-  
+
   .Founder {
     color: rgba(0, 0, 0, 0.614);
     padding: 5px;
@@ -20,11 +20,10 @@
       font-size: 1.4rem;
       margin: -20px 0px 20px;
     }
-    .horizontal{
+    .horizontal {
       height: 1vh;
       width: 20vw;
       background-color: rgb(215, 215, 60);
-      
     }
     p {
       width: 43vw;
@@ -38,7 +37,25 @@
     }
   }
 
-  .desc{
+  .desc {
     padding-left: 4vw;
+  }
+}
+
+@media screen and (max-width: 980px) {
+  .founder {
+    .Founder {
+      display: block;
+      img {
+        width: 60vw;
+        height: 180vh;
+      }
+      p {
+        width: 70vw;
+      }
+    }
+    .Desc {
+      padding: 10vh 10vw 0;
+    }
   }
 }

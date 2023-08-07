@@ -12,6 +12,12 @@
         display: inline;
         padding: 0px 20px;
       }
+      .img {
+        width: 75px;
+        height: 54px;
+        z-index: 1;
+        margin: -21px 0;
+      }
       .link {
         color: white;
         text-decoration: none;
@@ -21,6 +27,47 @@
       .link:hover {
         color: #ffff00;
       }
+    }
+  }
+}
+
+@media only screen and (max-width: 980px) {
+  .nav {
+    margin: 0;
+    .navbar {
+      background-color: yellow;
+      width: 100vw;
+      height: 28vh;
+      border-radius: 0;
+      .container {
+        margin-top: 10vh;
+        margin-left: 85vw;
+        .vertical {
+          display: block;
+          width: 2.5vw;
+          height: 0.5vh;
+          margin: 2.5px 0;
+          background-color: #ff1493;
+          border-radius: 15px;
+        }
+      }
+      .container:hover {
+        cursor: pointer;
+      }
+      ul {
+        li {
+          display: none;
+        }
+        .img {
+          width: 205px;
+          height: 120px;
+          z-index: 1;
+          margin: -10vh 0 0 15vw;
+        }
+      }
+    }
+    .mobileNav {
+      z-index: 2;
     }
   }
 }

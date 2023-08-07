@@ -5,7 +5,7 @@ function Founder() {
   return (
     <>
       <div className="founder">
-        <div className="Founder">
+        <div className="Founder Desc">
           <img src={prafful} alt="praffulImg" />
         </div>
         <div className="Founder desc">
@@ -17,12 +17,13 @@ function Founder() {
             <span>MBA CHAI WALA PVT. LTD.</span> is an icon among the youth of
             the nation. His unwavering determination and ambitious spirit have
             propelled him to represent India on both national and international
-            platforms. <br /> <br /> He faced numerous challenges and overcame hurdles with
-            persistent effort and hard work, undeterred by any setback, he
-            turned his passion towards entrepreneurship and established a small
-            tea stall that has now become the iconic MBA CHAI WALA, representing{" "}
-            <span>Mr. Prafull Billore’s</span> vision for progress. <br /> <br />With the
-            mantra{" "}
+            platforms. <br /> <br /> He faced numerous challenges and overcame
+            hurdles with persistent effort and hard work, undeterred by any
+            setback, he turned his passion towards entrepreneurship and
+            established a small tea stall that has now become the iconic MBA
+            CHAI WALA, representing <span>Mr. Prafull Billore’s</span> vision
+            for progress. <br /> <br />
+            With the mantra{" "}
             <span className="highlight">
               “Har Ghar Start-up, Ghar Ghar Start-up,”
             </span>{" "}
@@ -32,11 +33,10 @@ function Founder() {
             growth-oriented mindset among the people of our nation. We believe
             that tea can be an avenue for productive discussions, strategic
             planning, and ambitious pursuits, driving the advancement of our
-            society. <br /> <br /> With unwavering commitment and the support of his brother
-            and Co-Founder, <span>
-              Mr. Vivek Billore, Mr. Prafull Billore
-            </span>{" "}
-            has tirelessly worked day and night to establish{" "}
+            society. <br /> <br /> With unwavering commitment and the support of
+            his brother and Co-Founder,{" "}
+            <span>Mr. Vivek Billore, Mr. Prafull Billore</span> has tirelessly
+            worked day and night to establish{" "}
             <span>MBA CHAI WALA PVT. LTD.,</span> the most iconic chai chain in
             India. Through our efforts to change the perception of chai to one
             of inspiration, we strive to make a meaningful impact and exude an

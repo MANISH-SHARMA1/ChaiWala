@@ -5,15 +5,17 @@
   background-color: yellow;
   h1 {
     color: #ff1493;
+    font-weight: 800;
   }
   .horizontal {
     height: 0.5vh;
     width: 10vw;
     background-color: rgba(0, 0, 0, 0.671);
-    margin: -2vh 0 -2vh 34.5vw;
+    margin: -2vh 0 -2vh 35.5vw;
   }
   h4 {
     color: rgba(0, 0, 0, 0.671);
+    font-weight: 800;
   }
   img {
     width: 80vw;
@@ -26,13 +28,12 @@
 
 .treat {
   background-color: white;
-
-  padding: 0 10vw 10vh;
+  margin: 0 10vw 10vh;
 
   .Treat {
     margin-top: 123vh;
     position: relative;
-    z-index: 1;
+    z-index: 0;
 
     img {
       width: 30vw;
@@ -41,10 +42,12 @@
     display: inline-block;
     h1 {
       color: #ff1493;
-      margin: -1vh 0;
+      width: 30vw;
+      font-weight: 800;
     }
     p {
       width: 40vw;
+      font-size: 1.1em;
     }
     .image {
       display: inline;
@@ -58,7 +61,66 @@
       padding-left: 60px;
     }
   }
-  .treet{
+  .treet {
     padding-left: 8.6vw;
+  }
+}
+
+@media only screen and (max-width: 980px) {
+  .discover {
+    // margin-top: -5vh;
+    h1 {
+      font-size: 4.9em;
+      font-weight: 800;
+    }
+    .horizontal {
+      height: 0.5vh;
+      width: 13vw;
+      background-color: rgba(0, 0, 0, 0.671);
+      margin: -11vh 0 -2vh 34.5vw;
+    }
+    img {
+      width: 77vw;
+      height: 50vh;
+      background-color: white;
+      padding: 25px 10px;
+      border-radius: 25px;
+    }
+  }
+
+  .treat {
+    background-color: white;
+    margin: 0 5vw 2vh;
+
+    .Treat {
+      margin-top: 80vh;
+      display: block;
+
+      img {
+        width: 80vw;
+        height: 125vh;
+      }
+      h1 {
+        width: 60vw;
+        font-size: 2.1em;
+      }
+      p {
+        width: 69vw;
+        margin-bottom: 5vh;
+      }
+      .image {
+        display: inline;
+        img {
+          height: 14vh;
+          width: 15vw;
+        }
+      }
+      .img {
+        margin-left: 20vw;
+      }
+    }
+    .treet {
+      margin-top: 10vh;
+    }
   }
 }
