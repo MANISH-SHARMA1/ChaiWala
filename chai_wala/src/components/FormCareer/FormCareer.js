@@ -22,7 +22,7 @@ function FormCareer() {
               Contact No.
             </label>
             <input
-              className="input"
+              className="input "
               type="phone"
               id="contact"
               placeholder="Contact No."
