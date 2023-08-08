@@ -7,43 +7,38 @@ function Form() {
     <>
       <div className="fullPage">
         <div className="page">
-          <div className="formPage">
-            <img src={brand} alt="brandImg" />
-          </div>
-          <div className="formPage Form">
+          <img src={brand} alt="brandImg" />
+          <div className="Form">
             <h1>ENQUIRY FORM</h1>
             <div className="horizontal"></div>
             <h3>Let Us Know More About You!</h3>
+
             <form onSubmit="" className="form">
               <div className="padding">
-                <label className="frm " htmlFor="name">
-                  Your Name
-                </label>
+                <label htmlFor="name">Your Name</label>
                 <input
-                  className="frm input"
+                  className=" input"
                   type="text"
                   id="name"
                   placeholder="Jhon Doe"
                 />
               </div>
               <div className="box">
-                <div className="firstBox padding">
-                  <label className="frm " htmlFor="email">
-                    Your Email
-                  </label>
+                <div className="padding">
+                  <label htmlFor="email">Your Email</label>
                   <input
-                    className="frm input"
+                    className="input"
                     type="mail"
                     id="email"
                     placeholder="abcd@xyz.com"
                   />
                 </div>
-                <div className="firstBox padding">
-                  <label className="frm" htmlFor="contact">
+                <div className="padding">
+                  <label id="contact" htmlFor="contact">
                     Contact No.
                   </label>
                   <input
-                    className="frm input"
+                    className=" input"
                     type="phone"
                     id="contact"
                     placeholder="+91-**********"
@@ -51,11 +46,15 @@ function Form() {
                 </div>
               </div>
               <div className="box">
-                <div className="secondBox padding">
-                  <label className="frm" htmlFor="investment">
+                <div className="padding">
+                  <label id="select" htmlFor="investment">
                     Investment Size?
                   </label>
-                  <select className="frm input select" name="" id="investment">
+                  <select
+                    className=" input select"
+                    name=""
+                    id="investment, select"
+                  >
                     <option value="" selected>
                       Select
                     </option>
@@ -65,11 +64,15 @@ function Form() {
                     <option value="More than 40 Lacs">More than 40 Lacs</option>
                   </select>
                 </div>
-                <div className="secondBox padding">
-                  <label className="frm" htmlFor="occupation">
+                <div className="padding">
+                  <label id="select" className="" htmlFor="occupation">
                     Occupation
                   </label>
-                  <select className="frm input select" name="" id="occupation">
+                  <select
+                    className=" input select"
+                    name=""
+                    id="occupation select"
+                  >
                     <option value="" selected>
                       Select
                     </option>
@@ -79,12 +82,10 @@ function Form() {
                     <option value="self Employed">Self Employed</option>
                   </select>
                 </div>
-                <div className="secondBox padding">
-                  <label className="frm" htmlFor="age">
-                    Age
-                  </label>
+                <div className="padding">
+                  <label htmlFor="age">Age</label>
                   <input
-                    className="frm input"
+                    className=" input"
                     type="number"
                     id="age"
                     placeholder="Age"
@@ -92,23 +93,19 @@ function Form() {
                 </div>
               </div>
               <div className="box">
-                <div className="thirdBox padding">
-                  <label className="frm" htmlFor="city">
-                    City
-                  </label>
+                <div className="padding ">
+                  <label htmlFor="city">City</label>
                   <input
-                    className="frm input"
+                    className=" input code"
                     type="text"
                     id="city"
                     placeholder="City"
                   />
                 </div>
 
-                <div className="thirdBox padding">
-                  <label className="frm" htmlFor="state">
-                    State
-                  </label>
-                  <select className="frm input select" name="" id="state">
+                <div className="padding">
+                  <label htmlFor="state">State</label>
+                  <select className=" input select" name="" id="state">
                     <option value="" selected>
                       Select
                     </option>
@@ -126,12 +123,10 @@ function Form() {
                     <option value="Telangna">Telangna</option>
                   </select>
                 </div>
-                <div className="thirdBox padding">
-                  <label className="frm" htmlFor="pinCode">
-                    Pin-Code
-                  </label>
+                <div className="padding">
+                  <label htmlFor="pinCode">Pin-Code</label>
                   <input
-                    className="frm input"
+                    className="input code"
                     type="number"
                     id="pinCode"
                     placeholder="Pin Code"
@@ -139,12 +134,10 @@ function Form() {
                 </div>
               </div>
               <div className="padding">
-                <label className="frm" htmlFor="question">
-                  Why MBA Chai Wala?
-                </label>
+                <label htmlFor="question">Why MBA Chai Wala?</label>
                 <textarea name="" id="question"></textarea>
               </div>
-              <input className="frm submit padding" type="submit" />
+              <input className=" submit padding" type="submit" />
             </form>
           </div>
         </div>
