@@ -52,13 +52,19 @@
       font-size: 1.2em;
       padding: 0 0 10vh;
     }
-    .address{
+    .address {
       padding: 0 25vw;
     }
-    .iconn{
+    .iconn {
       font-size: 2em;
 
       // margin: -5vh, 0;
     }
+  }
+}
+
+@media only screen and (max-width: 980px) {
+  .Top {
+    padding-top: 28vh;
   }
 }
