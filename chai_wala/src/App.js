@@ -11,23 +11,33 @@ import ITea from "./pages/i-Tea/ITea";
 import Cart from "./pages/Cart/Cart";
 import Checkout from "./pages/Checkout/Checkout";
 import Navbar from "./navbar/Navbar";
+import TermsConditions from "./components/QuickLinks/Terms&Condition/TermsConditions";
+import PrivacyPolicy from "./components/QuickLinks/privacyPolicy/PrivacyPolicy";
+import Shipping from "./components/QuickLinks/shipping/Shipping";
+import Cancellation from "./components/QuickLinks/cancellation/Cancellation";
+import FAQs from "./components/QuickLinks/FAQs/FAQs";
 
 function App() {
   return (
     <>
       <Routes>
-        <Route path="/" element={<Navbar/>}>
+        <Route path="/" element={<Navbar />}>
           <Route index element={<Home />} />
-          <Route path="/aboutUs" element={<AboutUs/>}/>
-          <Route path="/venture" element={<Venture/>}/>
-          <Route path="/gallery" element={<Gallery/>}/>
-          <Route path="/enquiry" element={<Enquiry/>}/>
-          <Route path="/careers" element={<Career/>}/>
-          <Route path="/i_tea" element={<ITea/>}/>
+          <Route path="/aboutUs" element={<AboutUs />} />
+          <Route path="/venture" element={<Venture />} />
+          <Route path="/gallery" element={<Gallery />} />
+          <Route path="/enquiry" element={<Enquiry />} />
+          <Route path="/careers" element={<Career />} />
+          <Route path="/i_tea" element={<ITea />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/contactUs" element={<ContactUs />} />
           <Route path="/cart" element={<Cart />} />
           <Route path="/checkout" element={<Checkout />} />
+          <Route path="/termsConditions" element={<TermsConditions />} />
+          <Route path="/privacyPolicy" element={<PrivacyPolicy />} />
+          <Route path="/shipping" element={<Shipping />} />
+          <Route path="/cancellationRefund" element={<Cancellation />} />
+          <Route path="/faqs" element={<FAQs />} />
         </Route>
       </Routes>
     </>
