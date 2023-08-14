@@ -1,8 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Cart.scss";
 import Footer from "../../components/Footer/Footer";
+import CartItem from "./CartItem";
+
 
 function Cart() {
+  const [cart, setCart] = useState("false");
   return (
     <>
       <div className="Cart">
@@ -14,6 +17,7 @@ function Cart() {
           <div className="btn">Return to shop</div>
         </div>
       </div>
+      <CartItem />
       <Footer />
     </>
   );
