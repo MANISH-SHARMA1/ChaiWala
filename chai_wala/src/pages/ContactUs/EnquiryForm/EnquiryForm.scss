@@ -1,0 +1,67 @@
+.enquiryForm {
+  margin: 10vh 10vw;
+  display: flex;
+  align-items: center;
+  flex-flow: column wrap;
+  h1 {
+    color: #ff1493;
+    text-align: center;
+  }
+  .horizontal {
+    background-color: yellow;
+    height: 1vh;
+    text-align: center;
+    width: 20vw;
+    margin-top: -2.5vh;
+    margin-bottom: 5vh;
+  }
+  .form {
+    border: 5px solid #ff1493;
+    border-radius: 35px;
+    padding: 35px;
+    color: rgb(85, 83, 83);
+    .raw {
+      display: flex;
+      align-items: left;
+      justify-content: space-between;
+      flex-flow: row wrap;
+      .input {
+        display: flex;
+        align-items: left;
+        justify-content: left;
+        flex-flow: column wrap;
+        margin: 25px;
+        label {
+          margin-bottom: 5px;
+          font-weight: 600;
+        }
+        span {
+          color: red;
+          font-weight: 800;
+        }
+        input {
+          width: 30vw;
+          padding: 10px;
+        }
+        select {
+          width: 32vw;
+          padding: 11.5px;
+        }
+        option {
+          color: rgb(85, 83, 83);
+        }
+      }
+      #submit{
+        color: white;
+        background-color: #ff1493;
+        border: none;
+        border-radius: 5px;
+        padding: 15px;
+        margin: auto auto;
+        font-weight: 600;
+        font-size: 1em;
+        cursor: pointer;
+      }
+    }
+  }
+}
