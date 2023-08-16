@@ -18,6 +18,8 @@ import Cancellation from "./components/QuickLinks/cancellation/Cancellation";
 import FAQs from "./components/QuickLinks/FAQs/FAQs";
 import Product from "./pages/i-Tea/Components/product/Product";
 import EnquiryForm from "./pages/ContactUs/EnquiryForm/EnquiryForm";
+import IndiaChai from "./pages/Blog/IndiaChai/IndiaChai";
+import SippingChai from "./pages/Blog/SippingChai/SippingChai";
 
 function App() {
   return (
@@ -40,8 +42,10 @@ function App() {
           <Route path="/shipping" element={<Shipping />} />
           <Route path="/cancellationRefund" element={<Cancellation />} />
           <Route path="/faqs" element={<FAQs />} />
-          <Route path="/product" element={<Product/>} />
-          <Route path="/for-enquiry" element={<EnquiryForm/>} />
+          <Route path="/product" element={<Product />} />
+          <Route path="/for-enquiry" element={<EnquiryForm />} />
+          <Route path="/IndiaChai" element={<IndiaChai />} />
+          <Route path="/SippingChai" element={<SippingChai />} />
         </Route>
       </Routes>
     </>
