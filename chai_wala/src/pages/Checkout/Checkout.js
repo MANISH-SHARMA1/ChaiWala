@@ -6,26 +6,11 @@ import Information from "./Information/Information";
 
 function Checkout() {
   const states = [
-    {
-      label: "Andhra Pradesh",
-      value: "andhraPradesh",
-    },
-    {
-      label: "Arunanchal Pradesh",
-      value: "arunanchalPradesh",
-    },
-    {
-      label: "Assam",
-      value: "assam",
-    },
-    {
-      label: "Bihar",
-      value: "bihar",
-    },
-    {
-      label: "Chhattisgarh",
-      value: "chhattisgarh",
-    },
+    "Andhra Pradesh",
+    "Arunanchal Pradesh",
+    "Assam",
+    "Bihar",
+    "Chhattisgarh",
   ];
   const [differentAddress, setDifferentAddress] = useState("false");
 
@@ -171,9 +156,9 @@ function Checkout() {
                   <label htmlFor="state" aria-required>
                     State <span>*</span>
                   </label>
-                  <select name="" id="state">
+                  <select name="state" id="state">
                     {states.map((state) => {
-                      <option value={state.value}>{state.label}</option>;
+                      return (<option value={state}>{state}</option>);
                     })}
                   </select>
                 </div>
@@ -197,7 +182,7 @@ function Checkout() {
           </form>
         </div>
       </div>
-      
+
       <Table />
       <Information />
       <Footer />

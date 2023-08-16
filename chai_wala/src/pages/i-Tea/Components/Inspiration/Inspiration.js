@@ -3,8 +3,10 @@ import "./Inspiration.scss";
 import ElaichiTea from "../../../../Assets/iTea/iTea-Elaichi.jpg";
 import PremiumTea from "../../../../Assets/iTea/mbaTea.webp";
 import RegularTea from "../../../../Assets/iTea/i-Tea-Regular.webp";
+import { useNavigate } from "react-router";
 
 function Inspiration() {
+  const navigate = useNavigate();
   const image = [
     { img: ElaichiTea, name: "i-Tea Cardamom", price: "₹160.00" },
     { img: PremiumTea, name: "i-Tea Premium", price: "₹130.00 - ₹495.00" },
@@ -38,7 +40,7 @@ function Inspiration() {
               <div className="content">
                 <h4 id="name">{e.name}</h4>
                 <h4>{e.price}</h4>
-                <p>Read more</p>
+                <p onClick={() => {navigate("/product")}}>Read more</p>
               </div>
             </div>
           ))}

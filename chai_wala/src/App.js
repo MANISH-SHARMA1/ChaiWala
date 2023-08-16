@@ -16,6 +16,8 @@ import PrivacyPolicy from "./components/QuickLinks/privacyPolicy/PrivacyPolicy";
 import Shipping from "./components/QuickLinks/shipping/Shipping";
 import Cancellation from "./components/QuickLinks/cancellation/Cancellation";
 import FAQs from "./components/QuickLinks/FAQs/FAQs";
+import Product from "./pages/i-Tea/Components/product/Product";
+import EnquiryForm from "./pages/ContactUs/EnquiryForm/EnquiryForm";
 
 function App() {
   return (
@@ -38,6 +40,8 @@ function App() {
           <Route path="/shipping" element={<Shipping />} />
           <Route path="/cancellationRefund" element={<Cancellation />} />
           <Route path="/faqs" element={<FAQs />} />
+          <Route path="/product" element={<Product/>} />
+          <Route path="/for-enquiry" element={<EnquiryForm/>} />
         </Route>
       </Routes>
     </>
