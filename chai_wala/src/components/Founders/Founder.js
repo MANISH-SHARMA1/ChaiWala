@@ -8,7 +8,7 @@ function Founder() {
         <div className="Founder">
           <img src={prafful} alt="praffulImg" />
         </div>
-        <div className="Founder desc">
+        <div className="Founder Desc">
           <h1>MR. PRAFULL BILLORE</h1>
           <h3>Founder MBA CHAI WALA PVT. LTD.</h3>
           <div className="horizontal"></div>

@@ -14,7 +14,7 @@ function Blog() {
         <div className="cards">
           <div className="card">
             <img src={blogFirst} alt="img" />
-            <div className="desc">
+            <div className="descc">
               <h3>
                 India Runs on Chai: The Cultural Significance of India's Beloved
                 Beverage
@@ -32,7 +32,7 @@ function Blog() {
           </div>
           <div className="card">
             <img src={blogSecond} alt="img" />
-            <div className="desc">
+            <div className="descc">
               <h3>Sipping on Good Health: Exploring the benefits of CHAI</h3>
               <p>by Swarnika Porwal | Apr 25, 2023 | Chai</p>
               <p

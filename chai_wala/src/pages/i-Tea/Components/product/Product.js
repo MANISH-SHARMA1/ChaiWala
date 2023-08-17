@@ -40,6 +40,7 @@ function Product() {
       }
     }
   };
+ 
 
   return (
     <>
@@ -69,7 +70,9 @@ function Product() {
           </div>
           <div className="cart">
             <input id="number" type="number" />
-            <div className="btn">
+            <div
+              className="bttn"
+            >
               <p>Add to cart</p>
             </div>
           </div>
@@ -136,7 +139,7 @@ function Product() {
                   id="review"
                   placeholder="Your review *"
                 ></textarea>
-                <input type="text" placeholder="Name *" id="input"/>
+                <input type="text" placeholder="Name *" id="input" />
                 <input type="email" placeholder="Email *" id="input" />
               </div>
               <div className="bottom checkbox">
