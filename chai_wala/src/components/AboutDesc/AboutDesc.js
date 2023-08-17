@@ -25,10 +25,14 @@ function AboutDesc() {
           </span>
         </p>
         <div className="img">
-          <img className="images" src={prafful} alt="pbImg" />
-          <img className="images" src={vision} alt="vision" />
-          <img className="images" src={mission} alt="mission" />
-          <img className="images" src={vivek} alt="vbImg" />
+          <div>
+            <img className="images" src={prafful} alt="pbImg" />
+            <img className="images" src={vision} alt="vision" />
+          </div>
+          <div>
+            <img className="images" src={mission} alt="mission" />
+            <img className="images" src={vivek} alt="vbImg" />
+          </div>
         </div>
       </div>
     </>
