@@ -9,7 +9,7 @@
       margin-bottom: -10px;
     }
     p {
-        font-size: 1.1rem;
+      font-size: 1.1rem;
       span {
         color: rgba(0, 0, 0, 0.671);
       }
@@ -78,5 +78,11 @@
         width: 195px;
       }
     }
+  }
+}
+
+@media only screen and (max-width: 980px) {
+  .venture {
+    padding-top: 30vh;
   }
 }

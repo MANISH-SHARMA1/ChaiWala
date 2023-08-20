@@ -1,0 +1,98 @@
+.blog {
+  margin: 20vh 10vw;
+  .cards {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-flow: row wrap;
+    justify-items: center;
+    .card {
+      background-color: white;
+      width: 300px;
+      height: 400px;
+      border-radius: 25px;
+      box-shadow: 5px 5px 10px grey;
+      img {
+        height: 200px;
+        width: 300px;
+        border-radius: 25px;
+      }
+      .desc {
+        padding: 15px;
+        h3 {
+          font-weight: 800;
+        }
+        p {
+          color: rgb(89, 86, 86);
+          font-size: 0.8em;
+          font-weight: 800;
+        }
+        #btn {
+          color: green;
+          font-weight: 800;
+          font-size: 0.8em;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+  .subscription {
+    margin: 10vh 0;
+    padding: 5px;
+    text-align: center;
+    background-color: #ff1493;
+    border-radius: 35px;
+    color: white;
+    span {
+      color: yellow;
+    }
+    .input {
+      display: flex;
+      flex-flow: row wrap;
+      align-items: center;
+      justify-items: center;
+      justify-content: space-around;
+      font-size: 1em;
+      font-weight: 600;
+      input {
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        width: 20vw;
+        font-size: 1em;
+        font-weight: 400;
+      }
+    }
+    .btn {
+      color: yellow;
+      border: 1.5px solid yellow;
+      width: 10vw;
+      padding: 10px;
+      margin-left: 9vw;
+      font-weight: 600;
+      cursor: pointer;
+    }
+  }
+  .background{
+    .back{
+        color: white;
+        background-color: #ff1493;
+        text-align: left;
+        padding: 30px;
+        border-radius: 35px;
+        h1{
+            color: yellow;
+        }
+        .apply{
+            color: grey;
+            background-color: yellow;
+            width: 10vw;
+            border-radius: 25px;
+            padding: 10px;
+            text-align: center;
+            font-weight: 600;
+            cursor: pointer;
+        }
+    }
+  }
+}
