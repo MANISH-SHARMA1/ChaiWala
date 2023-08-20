@@ -20,6 +20,7 @@ import Product from "./pages/i-Tea/Components/product/Product";
 import EnquiryForm from "./pages/ContactUs/EnquiryForm/EnquiryForm";
 import IndiaChai from "./pages/Blog/IndiaChai/IndiaChai";
 import SippingChai from "./pages/Blog/SippingChai/SippingChai";
+import Login from "./pages/login/Login";
 
 function App() {
   return (
@@ -46,6 +47,7 @@ function App() {
           <Route path="/for-enquiry" element={<EnquiryForm />} />
           <Route path="/IndiaChai" element={<IndiaChai />} />
           <Route path="/SippingChai" element={<SippingChai />} />
+          <Route path="/login" element={<Login />} />
         </Route>
       </Routes>
     </>

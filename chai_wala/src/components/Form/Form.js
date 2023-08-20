@@ -1,8 +1,37 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Form.scss";
 import brand from "../../Assets/assets/Brand-aprtner.webp";
+import { axiosClient } from "../../utils/axiosClient";
 
 function Form() {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [contactNumber, setContactNumber] = useState("");
+  const [age, setAge] = useState("");
+  const [city, setCity] = useState("");
+  const [pinCode, setPinCode] = useState("");
+  const [question, setQuestion] = useState("");
+  const [investmentSize, setInvestmentSize] = useState("");
+  const [occupation, setOccupation] = useState("");
+  const [state, setState] = useState("");
+
+  async function handleSubmit(e) {
+    e.preventDefault();
+    const result = await axiosClient.post("/enquiry/", {
+      name,
+      email,
+      contactNumber,
+      investmentSize,
+      occupation,
+      age,
+      city,
+      state,
+      pinCode,
+      question,
+    });
+    console.log("EnquiryForm: ", result);
+  }
+
   return (
     <>
       <div className="fullPage">
@@ -13,7 +42,7 @@ function Form() {
             <div className="horizontal"></div>
             <h3>Let Us Know More About You!</h3>
 
-            <form onSubmit="" className="form">
+            <form onSubmit={handleSubmit} className="form">
               <div className="padding">
                 <label htmlFor="name">Your Name</label>
                 <input
@@ -21,6 +50,7 @@ function Form() {
                   type="text"
                   id="name"
                   placeholder="Jhon Doe"
+                  onChange={(e) => setName(e.target.value)}
                 />
               </div>
               <div className="box">
@@ -31,6 +61,7 @@ function Form() {
                     type="mail"
                     id="email"
                     placeholder="abcd@xyz.com"
+                    onChange={(e) => setEmail(e.target.value)}
                   />
                 </div>
                 <div className="padding">
@@ -42,6 +73,7 @@ function Form() {
                     type="phone"
                     id="contact"
                     placeholder="+91-**********"
+                    onChange={(e) => setContactNumber(e.target.value)}
                   />
                 </div>
               </div>
@@ -54,10 +86,9 @@ function Form() {
                     className=" input select"
                     name=""
                     id="investment, select"
+                    onChange={(e) => setInvestmentSize(e.target.value)}
                   >
-                    <option value="" selected>
-                      Select
-                    </option>
+                    <option selected>Select</option>
                     <option value="15 to 20 Lacs">15 to 20 Lacs</option>
                     <option value="20 to 25 Lacs">20 to 25 Lacs</option>
                     <option value="25 to 30 Lacs">25 to 30 Lacs</option>
@@ -72,6 +103,7 @@ function Form() {
                     className=" input select"
                     name=""
                     id="occupation select"
+                    onChange={(e) => setOccupation(e.target.value)}
                   >
                     <option value="" selected>
                       Select
@@ -89,6 +121,7 @@ function Form() {
                     type="number"
                     id="age"
                     placeholder="Age"
+                    onChange={(e) => setAge(e.target.value)}
                   />
                 </div>
               </div>
@@ -100,12 +133,17 @@ function Form() {
                     type="text"
                     id="city"
                     placeholder="City"
+                    onChange={(e) => setCity(e.target.value)}
                   />
                 </div>
 
                 <div className="padding">
                   <label htmlFor="state">State</label>
-                  <select className=" input select" name="" id="state">
+                  <select
+                    className=" input select"
+                    onChange={(e) => setState(e.target.value)}
+                    id="state"
+                  >
                     <option value="" selected>
                       Select
                     </option>
@@ -130,12 +168,17 @@ function Form() {
                     type="number"
                     id="pinCode"
                     placeholder="Pin Code"
+                    onChange={(e) => setPinCode(e.target.value)}
                   />
                 </div>
               </div>
               <div className="padding">
                 <label htmlFor="question">Why MBA Chai Wala?</label>
-                <textarea name="" id="question"></textarea>
+                <textarea
+                  name=""
+                  id="question"
+                  onChange={(e) => setQuestion(e.target.value)}
+                ></textarea>
               </div>
               <input className=" submit padding" type="submit" />
             </form>
