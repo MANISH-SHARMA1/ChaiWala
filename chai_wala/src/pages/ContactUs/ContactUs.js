@@ -2,10 +2,12 @@ import React from "react";
 import "./ContactUs.scss";
 import Footer from "../../components/Footer/Footer";
 import { FaTelegram } from "react-icons/fa";
-import {SiGooglemaps} from 'react-icons/si';
+import { SiGooglemaps } from "react-icons/si";
 import { FiPhoneCall } from "react-icons/fi";
+import { useNavigate } from "react-router";
 
 function ContactUs() {
+  const navigate = useNavigate();
   return (
     <>
       <div className="Top">
@@ -17,8 +19,22 @@ function ContactUs() {
             team or partner with us, we are happy to have a chat!
           </p>
           <div className="button">
-            <div className="btn">JOIN THE TEAM</div>
-            <div className="btn bttn">LET'S DO BUSINESS</div>
+            <div
+              className="btn"
+              onClick={() => {
+                navigate("/careers");
+              }}
+            >
+              JOIN THE TEAM
+            </div>
+            <div
+              className="btn bttn"
+              onClick={() => {
+                navigate("/for-enquiry");
+              }}
+            >
+              LET'S DO BUSINESS
+            </div>
             <div className="btn">A QUICK WORD</div>
           </div>
         </div>
