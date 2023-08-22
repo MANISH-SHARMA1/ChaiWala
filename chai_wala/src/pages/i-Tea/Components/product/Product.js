@@ -70,9 +70,7 @@ function Product() {
           </div>
           <div className="cart">
             <input id="number" type="number" />
-            <div
-              className="bttn"
-            >
+            <div className="bttn">
               <p>Add to cart</p>
             </div>
           </div>

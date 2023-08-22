@@ -43,7 +43,7 @@ function App() {
           <Route path="/shipping" element={<Shipping />} />
           <Route path="/cancellationRefund" element={<Cancellation />} />
           <Route path="/faqs" element={<FAQs />} />
-          <Route path="/product" element={<Product />} />
+          <Route path="/product/:id" element={<Product />} />
           <Route path="/for-enquiry" element={<EnquiryForm />} />
           <Route path="/IndiaChai" element={<IndiaChai />} />
           <Route path="/SippingChai" element={<SippingChai />} />
