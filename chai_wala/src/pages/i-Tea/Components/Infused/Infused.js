@@ -7,7 +7,7 @@ function Infused() {
     <>
       <div className="infused">
         <div className="border">
-          <div className="Infused desc">
+          <div className="Infused descrip">
             <h1>i-TEA, INFUSED</h1>
             <h1>WITH</h1>
             <h1>INSPIRATION</h1>

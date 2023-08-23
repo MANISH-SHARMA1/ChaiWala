@@ -8,7 +8,7 @@ function Description() {
   return (
     <>
       <div className="description">
-        <div className="desc DESC">
+        <div className="descr DESC">
           <h1>INSPIRED BY </h1>
           <h1> NATURE, </h1>
           <h1> CRAFTED WITH </h1>
@@ -28,7 +28,7 @@ function Description() {
             taste, ensuring that you receive only the finest tea in your cup.
           </p>
         </div>
-        <div className="desc">
+        <div className="descr">
           <img src={img} alt="" />
         </div>
         <div className="about">
