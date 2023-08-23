@@ -8,6 +8,8 @@ const careerRouter = require("./routers/careerRouter");
 const distributorship = require("./routers/distributorshipRouter");
 const enquiryForm = require("./routers/enquiryFormRouter");
 const flavors = require("./routers/flavorsRouter");
+const venture = require("./routers/ventureRouter");
+const aboutUs = require("./routers/aboutUsRouter");
 const morgan = require("morgan");
 const cookieParser = require("cookie-parser");
 const cors = require("cors");
@@ -33,6 +35,9 @@ app.use("/career", careerRouter);
 app.use("/distributorship", distributorship);
 app.use("/enquiryForm", enquiryForm);
 app.use("/flavors", flavors);
+app.use("/venture", venture);
+app.use("/aboutUs", aboutUs);
+
 app.get("/", (req, res) => {
   res.send("Ok from server");
 });

@@ -1,20 +1,19 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./Product.scss";
 import { AiOutlineStar } from "react-icons/ai";
 import Footer from "../../../../components/Footer/Footer";
-import ElaichiTea from "../../../../Assets/iTea/iTea-Elaichi.jpg";
-import PremiumTea from "../../../../Assets/iTea/mbaTea.webp";
-import RegularTea from "../../../../Assets/iTea/i-Tea-Regular.webp";
+import { axiosClient } from "../../../../utils/axiosClient";
+import { useNavigate, useParams } from "react-router";
 
 function Product() {
-  const image = [
-    { img: ElaichiTea, name: "i-Tea Cardamom", price: "₹160.00" },
-    { img: PremiumTea, name: "i-Tea Premium", price: "₹130.00 - ₹495.00" },
-    { img: RegularTea, name: "i-TEA Regular", price: "₹85.00 - ₹160.00" },
-  ];
   const [description, setDescription] = useState(true);
   const [information, setInformation] = useState(false);
   const [review, setReview] = useState(false);
+  const [dataa, setData] = useState([]);
+  const [products, setProducts] = useState([]);
+  const params = useParams();
+  const navigate = useNavigate();
+
   const handleClick = (e) => {
     console.log("clicked");
     console.log(`${e}`);
@@ -40,46 +39,60 @@ function Product() {
       }
     }
   };
- 
+
+  async function onLoad() {
+    try {
+      const data = await axiosClient.get(`/flavors/${params.id}`);
+      const result = data.data.result;
+      setData(result);
+      const product = await axiosClient.get("/flavors/");
+      setProducts(product.data.result);
+    } catch (error) {
+      console.log("error from axios:", error);
+    }
+  }
+
+  useEffect(() => {
+    onLoad();
+  }, []);
 
   return (
     <>
       <div className="product">
-        <div className="img">
-          <img src={PremiumTea} alt="img" />
-        </div>
-        <div className="description">
-          <h1>i-Tea Premium</h1>
-          <h2>₹130.00 – ₹495.00</h2>
-          <p id="para">
-            Elevate your tea-drinking experience with i-Tea Premium. Handpicked
-            and expertly blended, this exquisite tea offers a smooth and
-            refreshing taste that will soothe your senses and uplift your mood.
-            Enjoy a moment of pure bliss with every brew.
-          </p>
-          <div className="input">
-            <label htmlFor="weight">Weight</label>
-            <select name="" id="weight">
-              <option value="" selected>
-                Choose an option
-              </option>
-              <option value="250gm">250 gm</option>
-              <option value="500gm">500 gm</option>
-              <option value="1kg">1 kg</option>
-            </select>
-          </div>
-          <div className="cart">
-            <input id="number" type="number" />
-            <div className="bttn">
-              <p>Add to cart</p>
+        {dataa?.map((e) => (
+          <>
+            <div className="img">
+              <img src={e?.imgUrl} alt="img" />
             </div>
-          </div>
-          <hr />
-          <p id="para">
-            SKU: N/A/Category:{" "}
-            <span style={{ color: "skyblue", cursor: "pointer" }}>Tea</span>
-          </p>
-        </div>
+            <div className="description">
+              <h1>{e?.name}</h1>
+              <h2>{e?.price}</h2>
+              <p id="para">{e.description}</p>
+              <div className="input">
+                <label htmlFor="weight">Weight</label>
+                <select name="" id="weight">
+                  <option value="" selected>
+                    Choose an option
+                  </option>
+                  <option value="250gm">250 gm</option>
+                  <option value="500gm">500 gm</option>
+                  <option value="1kg">1 kg</option>
+                </select>
+              </div>
+              <div className="cart">
+                <input id="number" type="number" />
+                <div className="bttn">
+                  <p>Add to cart</p>
+                </div>
+              </div>
+              <hr />
+              <p id="para">
+                SKU: N/A/Category:{" "}
+                <span style={{ color: "skyblue", cursor: "pointer" }}>Tea</span>
+              </p>
+            </div>
+          </>
+        ))}
       </div>
       <div className="table">
         <div className="btns">
@@ -157,15 +170,18 @@ function Product() {
       <div className="Container">
         <h1>Related Products</h1>
 
-        {image.map((e, index) => (
+        {products?.map((e, index) => (
           <div
             key={index}
             className="imgContainer"
-            style={{ backgroundImage: `url(${e.img})` }}
+            style={{ backgroundImage: `url(${e?.imgUrl})` }}
+            onClick={() => {
+              navigate(`/product/${e._id}`);
+            }}
           >
             <div className="content">
-              <h4 id="name">{e.name}</h4>
-              <h4>{e.price}</h4>
+              <h4 id="name">{e?.name}</h4>
+              <h4>{e?.price}</h4>
               <p>Read more</p>
             </div>
           </div>
