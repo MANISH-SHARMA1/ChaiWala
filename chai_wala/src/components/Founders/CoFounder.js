@@ -2,16 +2,16 @@ import React from "react";
 import "./CoFounder.scss";
 import coFounder from "../../Assets/assets/VB-Sir.png"
 
-function CoFounder() {
+function CoFounder({data}) {
   return (
     <>
       <div className="coFounder">
         <div className="cofounder vivek">
-          <h1>MR. VIVEK BILLORE</h1>
-          <h3>Co-Founder MBA CHAI WALA PVT. LTD.</h3>
+          <h1>{data?.title}</h1>
+          <h3>{data?.subTitle}</h3>
           <div className="horizontal"></div>
-          <p>
-            <span>Mr. Vivek Billore,</span> the{" "}
+          <p>{data?.description}
+            {/* <span>Mr. Vivek Billore,</span> the{" "}
             <span>Co-Founder of MBA CHAI WALA PVT. LTD., </span>is a visionary
             leader and a spiritual guru. His unwavering support and
             contributions have been pivotal in the success of{" "}
@@ -34,11 +34,11 @@ function CoFounder() {
             <span>Mr. Vivek Billore</span> has worked diligently to grow
             <span>MBA CHAI WALA</span> and continuously strives to elevate to
             new heights. He has traversed a long path, navigating through
-            obstacles and surmounting challenges with resilience and tenacity.
+            obstacles and surmounting challenges with resilience and tenacity. */}
           </p>
         </div>
         <div className="cofounder">
-          <img src={coFounder} alt="coFounderImg" />
+          <img src={data?.imgUrl} alt="coFounderImg" />
         </div>
       </div>
     </>

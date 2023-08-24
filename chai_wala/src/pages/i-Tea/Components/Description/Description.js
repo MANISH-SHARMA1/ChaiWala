@@ -4,7 +4,7 @@ import img from "../../../../Assets/iTea/TEA-BG-Vector.png";
 import second from "../../../../Assets/iTea/MBA-CW-OUTLET-outline-01.png";
 import leaf from "../../../../Assets/iTea/tea-leaf.png";
 
-function Description() {
+function Description({ data }) {
   return (
     <>
       <div className="description">
@@ -15,7 +15,7 @@ function Description() {
           <h1> CARE</h1>
           <p
             style={{
-              backgroundImage: `url(${leaf})`,
+              backgroundImage: `url(${data[0]?.imgUrl})`,
               backgroundRepeat: "no-repeat",
               width: "250px",
               height: "250px",
@@ -29,16 +29,16 @@ function Description() {
           </p>
         </div>
         <div className="descr">
-          <img src={img} alt="" />
+          <img src={data[1]?.imgUrl} alt="" />
         </div>
         <div className="about">
-          <img src={second} alt="" />
+          <img src={data[2]?.imgUrl} alt="" />
         </div>
         <div className="about ABOUT">
           <h1>RETAIL PRESENCE</h1>
           <p
             style={{
-              backgroundImage: `url(${leaf})`,
+              backgroundImage: `url(${data[0]?.imgUrl})`,
               backgroundRepeat: "no-repeat",
               width: "250px",
               height: "250px",

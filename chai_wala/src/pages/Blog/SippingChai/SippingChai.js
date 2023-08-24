@@ -1,14 +1,25 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import chai from "../../../Assets/Blog/blog2nd.webp";
 import "./SippingChai.scss";
 import Footer from "../../../components/Footer/Footer";
+import { axiosClient } from "../../../utils/axiosClient";
 function SippingChai() {
+  const [data, setData] = useState([]);
+
+  async function onLoad() {
+    const response = await axiosClient.get("/blog/");
+    setData(response.data.result);
+  }
+
+  useEffect(() => {
+    onLoad();
+  }, []);
   return (
     <>
       <div className="sippingChai">
-        <h1>Sipping on Good Health: Exploring the benefits of CHAI</h1>
+        <h1>{data[1]?.heading}</h1>
         <p>by Swarnika Porwal | Apr 25, 2023 | Chai </p>
-        <img src={chai} alt="chaiImg" />
+        <img src={data[1]?.imgUrl} alt="chaiImg" />
         <p>
           <div className="gap">
             Chai is a popular drink made by brewing black tea with a mixture of

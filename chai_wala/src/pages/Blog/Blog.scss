@@ -17,7 +17,7 @@
         width: 300px;
         border-radius: 25px;
       }
-      .desc {
+      .descc {
         padding: 15px;
         h3 {
           font-weight: 800;
@@ -73,26 +73,26 @@
       cursor: pointer;
     }
   }
-  .background{
-    .back{
-        color: white;
-        background-color: #ff1493;
-        text-align: left;
-        padding: 30px;
-        border-radius: 35px;
-        h1{
-            color: yellow;
-        }
-        .apply{
-            color: grey;
-            background-color: yellow;
-            width: 10vw;
-            border-radius: 25px;
-            padding: 10px;
-            text-align: center;
-            font-weight: 600;
-            cursor: pointer;
-        }
+  .background {
+    .back {
+      color: white;
+      background-color: #ff1493;
+      text-align: left;
+      padding: 30px;
+      border-radius: 35px;
+      h1 {
+        color: yellow;
+      }
+      .apply {
+        color: grey;
+        background-color: yellow;
+        width: 10vw;
+        border-radius: 25px;
+        padding: 10px;
+        text-align: center;
+        font-weight: 600;
+        cursor: pointer;
+      }
     }
   }
 }

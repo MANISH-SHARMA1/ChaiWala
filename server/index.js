@@ -10,6 +10,11 @@ const enquiryForm = require("./routers/enquiryFormRouter");
 const flavors = require("./routers/flavorsRouter");
 const venture = require("./routers/ventureRouter");
 const aboutUs = require("./routers/aboutUsRouter");
+const homeRouter = require("./routers/homeRouter");
+const heroRouter = require("./routers/heroRouter");
+const iteaHeroRouter = require("./routers/iteaHeroRouter");
+const iTeaRouter = require("./routers/iTeaRouter");
+const blogRouter = require("./routers/blogRouter");
 const morgan = require("morgan");
 const cookieParser = require("cookie-parser");
 const cors = require("cors");
@@ -37,6 +42,11 @@ app.use("/enquiryForm", enquiryForm);
 app.use("/flavors", flavors);
 app.use("/venture", venture);
 app.use("/aboutUs", aboutUs);
+app.use("/home", homeRouter);
+app.use("/hero", heroRouter);
+app.use("/iteaHero", iteaHeroRouter);
+app.use("/iTea", iTeaRouter);
+app.use("/blog", blogRouter);
 
 app.get("/", (req, res) => {
   res.send("Ok from server");

@@ -20,7 +20,7 @@ import scoop from "../..//Assets/Featured/Scoop.png.crdownload";
 import tedx from "../..//Assets/Featured/tedx.png.crdownload";
 import zeenews from "../..//Assets/Featured/zeeNews.webp.crdownload";
 
-function OurStory() {
+function OurStory({data}) {
   const images = [
     aajTak,
     abp,
@@ -43,14 +43,14 @@ function OurStory() {
     <>
       <div className="story">
         <div className="Story">
-          <h1>OUR STORY</h1>
-          <p>
-            As a renowned Cafe chain with a widespread presence across various
+          <h1>{data?.title}</h1>
+          <p>{data?.description}
+            {/* As a renowned Cafe chain with a widespread presence across various
             regions in India, our corporate mission is to foster and empower
             individuals with the ambition, aspirations, and inspiration to
             become successful entrepreneurs. We strive to make a meaningful
             impact by reaching out to millions of people and instilling in them
-            an outlook to contribute to the development of a dynamic nation.
+            an outlook to contribute to the development of a dynamic nation. */}
           </p>
           <div className="horizontal">
             <p>FEATURED IN</p>

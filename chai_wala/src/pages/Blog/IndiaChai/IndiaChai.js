@@ -1,18 +1,27 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./IndiaChai.scss";
-import chai from "../../../Assets/Blog/Blog1st.webp";
 import Footer from "../../../components/Footer/Footer";
+import { axiosClient } from "../../../utils/axiosClient";
 
 function IndiaChai() {
+  const [data, setData] = useState([]);
+
+  async function onLoad() {
+    const response = await axiosClient.get("/blog/");
+    setData(response.data.result);
+  }
+
+  useEffect(() => {
+    onLoad();
+  }, []);
   return (
     <>
       <div className="indiaChai">
         <h1>
-          India Runs on Chai: The Cultural Significance of India’s Beloved
-          Beverage
+          {data[0]?.heading}
         </h1>
         <p>by Swarnika Porwal | May 2, 2023 | Chai</p>
-        <img src={chai} alt="chaiImg" />
+        <img src={data[0]?.imgUrl} alt="chaiImg" />
         <p>
           <div className="gap">
             India is known for its love affair with tea, especially the milky

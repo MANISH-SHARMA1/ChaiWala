@@ -1,48 +1,50 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./Blog.scss";
-import blogFirst from "../../Assets/Blog/Blog1st.webp";
-import blogSecond from "../../Assets/Blog/blog2nd.webp";
+import {axiosClient} from "../../utils/axiosClient"
 import Footer from "../../components/Footer/Footer";
 import { useNavigate } from "react-router";
 // import teaBackground from "../../Assets/Blog/I-TEA-2-jpg.webp";
 
 function Blog() {
   const navigate = useNavigate();
+  const [data, setData] = useState([]);
+
+  async function onLoad() {
+    const response = await axiosClient.get("/blog/");
+    setData(response.data.result);
+  }
+
+  useEffect(() => {
+    onLoad();
+  }, []);
   return (
     <>
       <div className="blog">
         <div className="cards">
-          <div className="card">
-            <img src={blogFirst} alt="img" />
+          <div
+            className="card"
+            onClick={() => {
+              navigate("/IndiaChai");
+            }}
+          >
+            <img src={data[0]?.imgUrl} alt="img" />
             <div className="descc">
-              <h3>
-                India Runs on Chai: The Cultural Significance of India's Beloved
-                Beverage
-              </h3>
+              <h3>{data[0]?.heading}</h3>
               <p>by Swarnika Porwal | May 2, 2023 | Chai</p>
-              <p
-                id="btn"
-                onClick={() => {
-                  navigate("/IndiaChai");
-                }}
-              >
-                READ MORE
-              </p>
+              <p id="btn">READ MORE</p>
             </div>
           </div>
-          <div className="card">
-            <img src={blogSecond} alt="img" />
+          <div
+            className="card"
+            onClick={() => {
+              navigate("/SippingChai");
+            }}
+          >
+            <img src={data[1]?.imgUrl} alt="img" />
             <div className="descc">
-              <h3>Sipping on Good Health: Exploring the benefits of CHAI</h3>
+              <h3>{data[1]?.heading}</h3>
               <p>by Swarnika Porwal | Apr 25, 2023 | Chai</p>
-              <p
-                id="btn"
-                onClick={() => {
-                  navigate("/SippingChai");
-                }}
-              >
-                READ MORE
-              </p>
+              <p id="btn">READ MORE</p>
             </div>
           </div>
         </div>
@@ -70,7 +72,14 @@ function Blog() {
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere,
               voluptatem.
             </p>
-            <p className="apply" onClick={()=>{navigate("/i_tea")}}>APPLY NOW</p>
+            <p
+              className="apply"
+              onClick={() => {
+                navigate("/i_tea");
+              }}
+            >
+              APPLY NOW
+            </p>
           </div>
         </div>
       </div>
