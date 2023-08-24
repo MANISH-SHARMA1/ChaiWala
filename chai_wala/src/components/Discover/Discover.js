@@ -5,14 +5,14 @@ import scooty from "../../Assets/assets/DISC.png.crdownload";
 import zomato from "../../Assets/assets/Zomato_button-jpg.webp.crdownload";
 import swiggy from "../../Assets/assets/Swiggy_button-jpg.webp.crdownload";
 
-function Discover() {
+function Discover({data}) {
   return (
     <>
       <div className="discover">
-        <h1>DISCOVER</h1>
+        <h1>{data?.title}</h1>
         <div className="horizontal"></div>
-        <h4>Our Recommended Menu</h4>
-        <img src={discover} alt="" />
+        <h4>{data?.subTitle}</h4>
+        <img src={data?.imgUrl} alt="" />
       </div>
 
       <div className="treat">

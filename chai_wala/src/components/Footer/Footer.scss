@@ -6,12 +6,14 @@
     .block {
       display: inline-table;
       margin-right: 10vw;
-      color: white;
+      color: rgb(139, 133, 133);
       h1 {
         color: #ece666;
       }
       li {
         list-style: none;
+        color: white;
+        cursor: pointer;
       }
       span {
         color: yellow;
@@ -19,7 +21,7 @@
         padding-right: 15px;
         margin-left: -45px;
       }
-      #ull{
+      #ull {
         margin-left: -40px;
         padding-bottom: 5px;
       }

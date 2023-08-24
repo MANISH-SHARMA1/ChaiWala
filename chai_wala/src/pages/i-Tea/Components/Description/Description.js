@@ -4,18 +4,18 @@ import img from "../../../../Assets/iTea/TEA-BG-Vector.png";
 import second from "../../../../Assets/iTea/MBA-CW-OUTLET-outline-01.png";
 import leaf from "../../../../Assets/iTea/tea-leaf.png";
 
-function Description() {
+function Description({ data }) {
   return (
     <>
       <div className="description">
-        <div className="desc DESC">
+        <div className="descr DESC">
           <h1>INSPIRED BY </h1>
           <h1> NATURE, </h1>
           <h1> CRAFTED WITH </h1>
           <h1> CARE</h1>
           <p
             style={{
-              backgroundImage: `url(${leaf})`,
+              backgroundImage: `url(${data[0]?.imgUrl})`,
               backgroundRepeat: "no-repeat",
               width: "250px",
               height: "250px",
@@ -28,17 +28,17 @@ function Description() {
             taste, ensuring that you receive only the finest tea in your cup.
           </p>
         </div>
-        <div className="desc">
-          <img src={img} alt="" />
+        <div className="descr">
+          <img src={data[1]?.imgUrl} alt="" />
         </div>
         <div className="about">
-          <img src={second} alt="" />
+          <img src={data[2]?.imgUrl} alt="" />
         </div>
         <div className="about ABOUT">
           <h1>RETAIL PRESENCE</h1>
           <p
             style={{
-              backgroundImage: `url(${leaf})`,
+              backgroundImage: `url(${data[0]?.imgUrl})`,
               backgroundRepeat: "no-repeat",
               width: "250px",
               height: "250px",

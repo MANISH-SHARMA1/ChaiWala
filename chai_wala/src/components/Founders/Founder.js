@@ -1,19 +1,19 @@
 import React from "react";
 import prafful from "../../Assets/assets/Prafull-Sir-copy-1.webp";
 import "./Founder.scss";
-function Founder() {
+function Founder({data}) {
   return (
     <>
       <div className="founder">
         <div className="Founder">
-          <img src={prafful} alt="praffulImg" />
+          <img src={data?.imgUrl} alt="praffulImg" />
         </div>
-        <div className="Founder desc">
-          <h1>MR. PRAFULL BILLORE</h1>
-          <h3>Founder MBA CHAI WALA PVT. LTD.</h3>
+        <div className="Founder Desc">
+          <h1>{data?.title}</h1>
+          <h3>{data?.subTitle}</h3>
           <div className="horizontal"></div>
-          <p>
-            <span>Mr. Prafull Billore,</span> the Founder of{" "}
+          <p>{data?.description}
+            {/* <span>Mr. Prafull Billore,</span> the Founder of{" "}
             <span>MBA CHAI WALA PVT. LTD.</span> is an icon among the youth of
             the nation. His unwavering determination and ambitious spirit have
             propelled him to represent India on both national and international
@@ -40,7 +40,7 @@ function Founder() {
             <span>MBA CHAI WALA PVT. LTD.,</span> the most iconic chai chain in
             India. Through our efforts to change the perception of chai to one
             of inspiration, we strive to make a meaningful impact and exude an
-            aura of progress & growth.
+            aura of progress & growth. */}
           </p>
         </div>
       </div>

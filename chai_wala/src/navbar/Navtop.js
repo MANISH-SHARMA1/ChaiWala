@@ -1,10 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Navtop.scss";
 import { MdCall } from "react-icons/md";
 import { FaTelegramPlane } from "react-icons/fa";
+import { BsCart4 } from "react-icons/bs";
+import CartItems from "../pages/cartItems/CartItems";
 function Navtop() {
+  const [isShown, setIsShown] = useState(false);
+  const cartItems = () => {
+    setIsShown(!isShown);
+  };
+
   return (
     <>
+      {isShown && <CartItems />}
       <div className="navTop">
         <div className="topp">
           {" "}
@@ -20,6 +28,9 @@ function Navtop() {
           </p>
           <div id="top" className="vertical"></div>
         </div>
+      </div>
+      <div className="cartt" onClick={cartItems}>
+        <BsCart4 />
       </div>
     </>
   );
