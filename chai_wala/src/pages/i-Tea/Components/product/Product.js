@@ -67,7 +67,7 @@ function Product() {
             <div className="description">
               <h1>{e?.name}</h1>
               <h2>{e?.price}</h2>
-              <p id="para">{e.description}</p>
+              <p id="para">{e?.description}</p>
               <div className="input">
                 <label htmlFor="weight">Weight</label>
                 <select name="" id="weight">
@@ -79,7 +79,7 @@ function Product() {
                   <option value="1kg">1 kg</option>
                 </select>
               </div>
-              <div className="cart">
+              <div className="cart-btn">
                 <input id="number" type="number" />
                 <div className="bttn">
                   <p>Add to cart</p>
