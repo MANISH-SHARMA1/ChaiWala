@@ -5,7 +5,7 @@
   .topp {
     background-color: white;
     position: fixed;
-    z-index: 1;
+    z-index: 99;
     .vertical {
       background-color: #ff1493;
       height: 41px;
@@ -27,4 +27,19 @@
       font-size: 1.1em;
     }
   }
+}
+
+.cartt{
+  margin-left: 93vw;
+  font-size: 1.9em;
+  color: white;
+  background-color: #ff1493;
+  border-radius: 15px;
+  padding: 6px 10px;
+  position: fixed;
+  cursor: pointer;
+}
+.cart:hover{
+  color: #ff1493;
+  background-color: white;
 }

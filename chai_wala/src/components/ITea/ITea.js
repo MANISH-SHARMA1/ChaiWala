@@ -1,25 +1,40 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./ITea.scss";
-import ElaichiTea from "../../Assets/iTea/iTea-Elaichi.jpg";
-import PremiumTea from "../../Assets/iTea/mbaTea.webp";
-import RegularTea from "../../Assets/iTea/i-Tea-Regular.webp";
+import { axiosClient } from "../../utils/axiosClient";
+
+import { useNavigate } from "react-router";
 function ITea() {
-  const image = [
-    { img: ElaichiTea, name: "i-Tea Cardamom", price: "₹160.00" },
-    { img: PremiumTea, name: "i-Tea Premium", price: "₹130.00 - ₹495.00" },
-    { img: RegularTea, name: "i-TEA Regular", price: "₹85.00 - ₹160.00" },
-  ];
+  const navigate = useNavigate();
+
+  const [data, setData] = useState([]);
+
+  async function onLoad() {
+    try {
+      const data = await axiosClient.get("/flavors/");
+      const result = data.data.result;
+      setData(result);
+    } catch (error) {
+      console.log("error from axios:", error);
+    }
+  }
+
+  useEffect(() => {
+    onLoad();
+  }, []);
   return (
     <>
       <div className="tea">
         <h1>i-TEA</h1>
         <h6>By MBA CHAI WALA</h6>
         <div className="horizontal"></div>
-        {image.map((e, index) => (
+        {data?.map((e, index) => (
           <div
             key={index}
             className="imgContainer"
-            style={{ backgroundImage: `url(${e.img})` }}
+            style={{ backgroundImage: `url(${e.imgUrl})` }}
+            onClick={() => {
+              navigate(`/product/${e._id}`);
+            }}
           >
             <div className="content">
               <h4 id="name">{e.name}</h4>
