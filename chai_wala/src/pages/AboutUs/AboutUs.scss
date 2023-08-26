@@ -1,8 +1,14 @@
-.about{
-    padding-top: 9vh;
-    img{
-        height: 90vh;
-        width: 98.7vw;
-        object-fit: fill;
-    }
+.about {
+  padding-top: 9vh;
+  img {
+    height: auto;
+    width: 100%;
+    object-fit: fill;
+  }
+}
+
+@media only screen and (max-width: 980px) {
+  .about {
+    padding-top: 28vh;
+  }
 }
