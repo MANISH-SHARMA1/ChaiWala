@@ -38,26 +38,6 @@
       }
     }
   }
-  .Total {
-    display: flex;
-    justify-content: space-between;
-    color: white;
-  }
-
-  .checkout {
-    display: flex;
-    margin: 0px;
-    justify-content: space-between;
-    .p {
-      background-color: white;
-      color: #ff1493;
-      padding-inline: 65px;
-    }
-    .p:hover{
-      border: 2px solid white;
-      background-color: #ff1493;
-      color: white;
-    }
-  }
+  
 
 }

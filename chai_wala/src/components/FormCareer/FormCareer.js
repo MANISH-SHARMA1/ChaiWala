@@ -15,7 +15,7 @@ function FormCareer() {
   async function handleSubmit(e) {
     e.preventDefault();
     try {
-      const data = await axiosClient.post("/career/", {
+      await axiosClient.post("/career/", {
         name,
         email,
         contactNumber,
@@ -25,8 +25,6 @@ function FormCareer() {
         city,
         state,
       });
-
-      console.log("data: ", data);
     } catch (error) {
       console.log("error: ", error);
     }

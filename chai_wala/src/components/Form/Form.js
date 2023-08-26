@@ -17,7 +17,7 @@ function Form() {
 
   async function handleSubmit(e) {
     e.preventDefault();
-    const result = await axiosClient.post("/enquiry/", {
+    await axiosClient.post("/enquiry/", {
       name,
       email,
       contactNumber,
@@ -29,7 +29,6 @@ function Form() {
       pinCode,
       question,
     });
-    console.log("EnquiryForm: ", result);
   }
 
   return (

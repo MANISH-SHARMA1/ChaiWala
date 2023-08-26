@@ -1,14 +1,12 @@
 .introduction {
   background-color: #ff1493;
-  padding-left: 10vw;
-padding-bottom: 28vh;
+  height: 110vh;
+  display: flex;
+  justify-content: center;
   .intro {
-    padding-top: 20px;
-    display: inline-block;
     img {
       width: 37vw;
-      height: 109vh;
-      margin-bottom: -33vh;
+      height: 100vh;
     }
     h4 {
       color: white;
@@ -18,18 +16,18 @@ padding-bottom: 28vh;
       font-size: 2.5rem;
       margin: -20px 0px 5px;
     }
-    .horizontal{
-        width: 15vw;
-        height: 1vh;
-        background-color: white;
-        margin-top: -1vh;
+    .horizontal {
+      width: 15vw;
+      height: 0.5vh;
+      background-color: white;
     }
     p {
       color: white;
       width: 40vw;
-      }
+      margin-top: 10vh;
+    }
   }
   .Intro{
-    padding-left: 5vw;
+    margin-left: 5vw;
   }
 }

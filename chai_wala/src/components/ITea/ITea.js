@@ -38,7 +38,7 @@ function ITea() {
           >
             <div className="content">
               <h4 id="name">{e.name}</h4>
-              <h4>{e.price}</h4>
+              <h4>₹{e.price}</h4>
               <p>Read more</p>
             </div>
           </div>

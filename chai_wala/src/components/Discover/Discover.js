@@ -1,6 +1,5 @@
 import React from "react";
 import "./Discover.scss";
-import discover from "../../Assets/assets/DISCover.png";
 import scooty from "../../Assets/assets/DISC.png.crdownload";
 import zomato from "../../Assets/assets/Zomato_button-jpg.webp.crdownload";
 import swiggy from "../../Assets/assets/Swiggy_button-jpg.webp.crdownload";

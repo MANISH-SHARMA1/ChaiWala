@@ -1,8 +1,6 @@
 import React from "react";
 import "./Description.scss";
-import img from "../../../../Assets/iTea/TEA-BG-Vector.png";
-import second from "../../../../Assets/iTea/MBA-CW-OUTLET-outline-01.png";
-import leaf from "../../../../Assets/iTea/tea-leaf.png";
+
 
 function Description({ data }) {
   return (

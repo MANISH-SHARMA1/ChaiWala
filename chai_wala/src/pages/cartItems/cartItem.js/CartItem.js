@@ -1,45 +1,38 @@
 import React from "react";
 import "./CartItem.scss";
-import { AiOutlineClose } from "react-icons/ai";
+import { useDispatch } from "react-redux";
+import { addToCart, removeFromCart } from "../../../redux/cartSlice";
 
-function CartItem() {
+function CartItem({ cart }) {
+  const dispatch = useDispatch();
+
   return (
     <>
       <div className="CartItem">
         <div className="item-info-wrapper">
           <div className="item-info">
             <div className="item-img">
-              <img src="https://via.placeholder.com/250" alt="" />
+              <img src={cart?.imgUrl} alt="" />
             </div>
             <div className="Info">
-              <h4 className="title desc">i-Tea Premium-250 gm</h4>
-              <p className="price desc">₹ 130.00</p>
+              <h4 className="title desc">{cart.name}</h4>
+              <p className="price desc">₹{cart.price}</p>
             </div>
             <div className="quantity-selector">
-              <span className="btn">-</span>
-              <span className="quantity">1</span>
-              <span className="btn">+</span>
+              <span
+                className="btn"
+                onClick={() => dispatch(removeFromCart(cart))}
+              >
+                -
+              </span>
+              <span className="quantity">{cart.quantity}</span>
+              <span className="btn" onClick={() => dispatch(addToCart(cart))}>
+                +
+              </span>
             </div>
           </div>
         </div>
-        <div className="Total">
-          <div className="total">
-            <p>Subtotal</p>
-            <p>Total</p>
-          </div>
-          <div className="total">
-            <p>₹390.00</p>
-            <p>₹390.00</p>
-          </div>
-        </div>
-        <div className="checkout">
-          <div className="p">
-            <p>CART</p>
-          </div>
-          <div className="p">
-            <p>CHECKOUT</p>
-          </div>
-        </div>
+       
       </div>
     </>
   );

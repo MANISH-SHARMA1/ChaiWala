@@ -24,7 +24,7 @@
     transform: translateX(100%);
 
     .topp {
-      background-color: rgba(0, 0, 0, 0.22);
+      background-color: rgba(0, 0, 0, 0.094);
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -39,86 +39,44 @@
         cursor: pointer;
       }
     }
+    .empty-cart-info {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin: 20px;
+      align-items: center;
+      justify-content: center;
 
-    // .item {
-    //   margin: 5px;
-    //   background-color: white;
-    //   color: black;
-    //   display: flex;
-    //   align-items: center;
-    //   justify-content: center;
-    // img {
-    //   margin-top: 5vh;
-    //   margin-left: 1vw;
-    //   margin-bottom: 0;
-    //   margin-right: 0;
-    // }
-    // .desc {
-    //   display: inline-block;
-    //   p {
-    //     margin-left: -5vw;
-    //     margin-bottom: 0vh;
-    //     font-weight: 800;
-    //     font-size: 0.7em;
-    //     text-align: left;
-    //   }
-    //   .btn {
-    //     display: inline-block;
-    //   }
-    //   button {
-    //     border: none;
-    //     cursor: pointer;
-    //     padding: 5px;
-    //     width: 30px;
-    //   }
-    //   button:hover {
-    //     background-color: rgba(178, 171, 171, 0.558);
-    //   }
-    //   input {
-    //     width: 15px;
-    //     padding: 5px;
-    //     border: none;
-    //     background-color: rgba(225, 218, 218, 0.429);
-    //   }
-    // }
-    // .bttn {
-    //   margin-left: -5vw;
-    //   margin-right: 1vw;
-    // }
-    // }
-    // .price {
-    //   .subtotal {
-    //     display: inline-block;
-    //     p {
-    //       display: block;
-    //       margin-left: 30px;
-    //       font-weight: 600;
-    //     }
-    //     #rate {
-    //       margin-left: 23vw;
-    //     }
-    //   }
-    // }
-    // .buttons {
-    //   .button {
-    //     display: inline;
-    //   }
-    //   button {
-    //     margin-left: 30px;
-    //     border: none;
-    //     color: #ff1493;
-    //     background-color: white;
-    //     padding: 15px;
-    //     width: 15vw;
-    //     font-weight: 600;
-    //     cursor: pointer;
-    //   }
-    //   button:hover {
-    //     border: 1px solid white;
-    //     color: white;
-    //     background-color: #ff1493;
-    //   }
-    // }
+      .icon {
+        font-size: 3rem;
+        color: white;
+      }
+
+      h4 {
+        color: white;
+      }
+    }
+    .bottom {
+      margin: 0 15px;
+      .Total {
+        display: flex;
+        justify-content: space-between;
+        color: white;
+      }
+      .checkout {
+        margin: 0;
+        border: 2px solid;
+        background-color: white;
+        color: #ff1493;
+        cursor: pointer;
+        text-align: center;
+      }
+      .checkout:hover {
+        border: 2px solid white;
+        background-color: #ff1493;
+        color: white;
+      }
+    }
   }
 }
 

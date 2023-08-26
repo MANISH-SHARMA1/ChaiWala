@@ -119,9 +119,6 @@
       display: block;
       margin: 5vh 0;
     }
-    .checkbox {
-      margin-left: -2.2vw;
-    }
     #checkbox {
       margin-right: -1vw;
     }
@@ -150,7 +147,7 @@
     height: 300px;
     margin: 25px 20px;
     box-shadow: 5px 5px 2px 0px rgba(0, 0, 0, 0.3);
-
+    text-align: center;
     .content {
       margin-top: 310px;
       #name {

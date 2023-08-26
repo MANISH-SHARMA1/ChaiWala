@@ -15,6 +15,7 @@ const heroRouter = require("./routers/heroRouter");
 const iteaHeroRouter = require("./routers/iteaHeroRouter");
 const iTeaRouter = require("./routers/iTeaRouter");
 const blogRouter = require("./routers/blogRouter");
+const flavorReviewRouter = require("./routers/flavorsReviewRouter");
 const morgan = require("morgan");
 const cookieParser = require("cookie-parser");
 const cors = require("cors");
@@ -47,6 +48,7 @@ app.use("/hero", heroRouter);
 app.use("/iteaHero", iteaHeroRouter);
 app.use("/iTea", iTeaRouter);
 app.use("/blog", blogRouter);
+app.use("/reviewFlavor", flavorReviewRouter);
 
 app.get("/", (req, res) => {
   res.send("Ok from server");
