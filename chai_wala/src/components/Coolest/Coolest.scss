@@ -1,34 +1,22 @@
 .coolest {
-  // padding: 5px;
   background-color: yellow;
+  display: flex;
+  align-items: center;
   .cool {
-    display: inline-block;
-    padding-left: 10vw;
+    margin: 0 10vw;
     h1 {
-      color: rgba(0, 0, 0, 0.549);
-      margin: -1vh;
-      font-size: 2.6rem;
-    }
-    .hOne {
       color: #ff1493;
+      font-size: 2.6rem;
     }
     p {
       width: 40vw;
       color: rgba(0, 0, 0, 0.549);
-      span {
-        color: rgba(0, 0, 0, 0.708);
-      }
-    }
-    span {
-      color: rgba(0, 0, 0, 0.708);
     }
     img {
       width: 35vw;
       height: 80vh;
-      margin-left: -7vw;
+      margin-left: -10vw;
     }
   }
-
- 
- 
 }
+

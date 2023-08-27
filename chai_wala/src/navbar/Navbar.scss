@@ -4,7 +4,7 @@
     background-color: #ff1493;
     border-radius: 45px;
     position: fixed;
-    z-index: 1;
+    z-index: 99;
 
     ul {
       li {
@@ -18,7 +18,7 @@
         font-size: 0.89em;
         font-weight: 600;
       }
-      .link:hover {
+      .link:focus {
         color: #ffff00;
       }
     }

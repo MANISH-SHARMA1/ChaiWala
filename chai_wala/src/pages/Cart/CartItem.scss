@@ -1,0 +1,57 @@
+.table {
+  margin: 12vh 10vw;
+  padding-bottom: 8px;
+  #cross {
+    color: #ff1493;
+    font-weight: 900;
+    cursor: pointer;
+  }
+  img {
+    background-color: #6e696c;
+    width: 25px;
+    height: 25px;
+  }
+  table {
+    width: 75vw;
+    border: 1px solid #6e696c;
+    border-collapse: collapse;
+  }
+  #link {
+    color: #ff1493;
+    cursor: pointer;
+  }
+}
+
+.totals {
+  text-align: center;
+  display: flex;
+  align-items: start;
+  align-content: end;
+  flex-flow: column wrap;
+  margin-right: 10vw;
+  margin-bottom: 10vh;
+  table {
+    border: 1px solid #6e696c;
+    border-collapse: collapse;
+    width: 38.5vw;
+  }
+  th,
+  td {
+    border-bottom: 1px solid #6e696c;
+    padding: 10px;
+    text-align: left;
+  }
+  .btnCheckout {
+    margin-top: 10vh;
+    color: #ff1493;
+    border: 2px solid #ff1493;
+    width: 38.5vw;
+    font-weight: 700;
+    font-size: 1.1em;
+    cursor: pointer;
+  }
+  .btnCheckout:hover{
+    color: white;
+    background-color:#ff1493;
+  }
+}

@@ -14,8 +14,6 @@ import ranvir from "../../Assets/YtFeed/ranbir.webp.crdownload";
 
 const divStyle = {
   display: "flex",
-//   alignItems: "center",
-//   justifyContent: "center",
   backgroundSize: "cover",
   height: "400px",
 };

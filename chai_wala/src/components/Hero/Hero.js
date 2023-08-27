@@ -1,16 +1,8 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./Hero.scss";
 import { Slide } from "react-slideshow-image";
 import "react-slideshow-image/dist/styles.css";
-import firstSlide from "../../Assets/Hero/heroOne.webp";
-import secondSlide from "../../Assets/Hero/heroTwo.webp";
-import thirdSlide from "../../Assets/Hero/heroThree.webp";
-import fourthSlide from "../../Assets/Hero/heroFour.webp";
-import fifthSlide from "../../Assets/Hero/heroFive.webp";
-import sixthSlide from "../../Assets/Hero/heroSix.webp";
-import seventhSlide from "../../Assets/Hero/heroSeven.webp";
-import eighthSlide from "../../Assets/Hero/heroEight.webp";
-import ninthSlide from "../../Assets/Hero/heroNine.webp";
+import { axiosClient } from "../../utils/axiosClient";
 
 const divStyle = {
   display: "flex",
@@ -19,30 +11,31 @@ const divStyle = {
   backgroundSize: "cover",
   height: "400px",
 };
-const slideImages = [
-  firstSlide,
-  secondSlide,
-  thirdSlide,
-  fourthSlide,
-  fifthSlide,
-  sixthSlide,
-  seventhSlide,
-  eighthSlide,
-  ninthSlide,
-];
 
 function Hero() {
+  const [data, setData] = useState([]);
+
+  async function onLoad() {
+    const response = await axiosClient.get("/hero/");
+    console.log(response.data.result);
+    setData(response.data.result);
+  }
+
+  useEffect(() => {
+    onLoad();
+  }, []);
+  console.log("data", data);
   return (
     <>
       <div className="slide-container">
         <Slide>
-          {slideImages.map((slideImage, index) => (
+          {data?.map((slideImage, index) => (
             <div key={index}>
               <div
                 className="divStyle"
                 style={{
                   ...divStyle,
-                  backgroundImage: `url(${slideImage})`,
+                  backgroundImage: `url(${slideImage.imgUrl})`,
                   height: "90vh",
                 }}
               ></div>
