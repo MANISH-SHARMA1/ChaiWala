@@ -1,11 +1,10 @@
 .Cart {
-  padding-top: 9vh;
+  margin-top: 9vh;
   .cart-container {
     padding: 5vh 10vw 30vh;
     h1 {
       font-size: 2.5em;
       color: #ff1493;
-      // font-weight: 600/;
     }
     .container {
       background-color: #ff1493;
@@ -24,6 +23,11 @@
       width: 15vw;
       margin-top: 3vw;
       font-size: 1.3em;
+      cursor: pointer;
+    }
+    .btn:hover{
+      color: white;
+      background-color: #ff1493;
     }
   }
 }

@@ -9,21 +9,21 @@ import Footer from "../../components/Footer/Footer";
 import { axiosClient } from "../../utils/axiosClient";
 
 function ITea() {
-const [data, setData] = useState([])
-  async function onLoad(){
-    const response = await axiosClient.get("/iTea/")
-setData(response.data.result)
+  const [data, setData] = useState([]);
+  async function onLoad() {
+    const response = await axiosClient.get("/iTea/");
+    setData(response.data.result);
   }
-  useEffect(()=> {
-    onLoad()
-  },[])
+  useEffect(() => {
+    onLoad();
+  }, []);
   return (
     <>
       <div className="itea">
         <Hero />
         <Infused />
         <Inspiration />
-        <Description data={data}/>
+        <Description data={data} />
         <EnquiryForm />
         <Footer />
       </div>

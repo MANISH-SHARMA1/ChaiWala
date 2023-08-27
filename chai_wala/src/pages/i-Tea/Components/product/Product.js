@@ -46,7 +46,7 @@ function Product() {
 
       const response = await axiosClient.get("/flavors/");
       const product = response.data.result;
-      setProducts(product.filter((item) => item._id != params.id));
+      setProducts(product.filter((item) => item._id !== params.id));
     } catch (error) {
       console.log("error from axios:", error);
     }

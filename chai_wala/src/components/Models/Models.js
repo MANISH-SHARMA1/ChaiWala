@@ -1,8 +1,7 @@
 import React from "react";
 import "./Models.scss";
-import HighwayModel from "../../Assets/assets/HighwayModel.jpg";
-import LoungeModel from "../../Assets/assets/LoungeModel.webp";
-function Models({data}) {
+
+function Models({ data }) {
   return (
     <>
       <div className="models">

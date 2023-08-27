@@ -1,8 +1,17 @@
 import React from "react";
 import "./CartItem.scss";
-import iTea from  "../../Assets/iTea/i-Tea-Regular.webp"
+import { removeFromCart } from "../../redux/cartSlice";
+import { useDispatch } from "react-redux";
+import { useNavigate } from "react-router";
 
-function CartItem() {
+function CartItem({ cart }) {
+  console.log("cartItem", cart);
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+  let totalAmount = 0;
+  cart.forEach((item) => {
+    totalAmount += item.quantity * item.price;
+  });
   return (
     <>
       <div className="table">
@@ -14,52 +23,49 @@ function CartItem() {
             <th>Quantity</th>
             <th>Subtotal</th>
           </tr>
-          <tr>
-            <td id="cross">×</td>
-            <td>
-              <img src={iTea} alt="img" />
-            </td>
-            <td id="link">i-Tea Premium - 250 Gm</td>
-            <td>₹130.00</td>
-            <td>
-              <input type="number" />
-            </td>
-            <td>₹130.00</td>
-          </tr>
+          {cart?.map((item) => (
+            <tr>
+              <td
+                id="cross"
+                onClick={() => {
+                  dispatch(removeFromCart(item));
+                }}
+              >
+                ×
+              </td>
+              <td>
+                <img src={item.imgUrl} alt="img" />
+              </td>
+              <td
+                id="link"
+                onClick={() => {
+                  navigate(`/product/${item._id}`);
+                }}
+              >
+                {item.name}
+              </td>
+              <td>₹{item.price}</td>
+              <td>{item.quantity}</td>
+              <td>₹{item.price * item.quantity}.00</td>
+            </tr>
+          ))}
         </table>
-        <div className="btns">
-          <input type="text" placeholder="Coupon code" />
-          <div className="coupon">
-            <p>Apply coupon</p>
-          </div>
-          <div className="update">
-            <p>Update cart</p>
-          </div>
-        </div>
       </div>
 
       <div className="totals">
+        <h2>Cart totals</h2>
+
         <table>
           <tr>
             <th>Subtotal</th>
-            <td>₹130.00</td>
+            <td>₹{totalAmount}.00</td>
           </tr>
 
           <tr>
-            <th>Shipping</th>
-            <td>
-              Village+Post - Khandlana, Saharanpur 247341, Uttar Pradesh.{" "}
-              <span style={{ color: "skyblue" }}>
-                Enter a different address
-              </span>
-            </td>
-          </tr>
-          <tr>
             <th>Total</th>
-            <td>₹130.00</td>
+            <td>₹{totalAmount+40}.00</td>
           </tr>
         </table>
-        <h2>Cart totals</h2>
         <div className="btnCheckout">
           <p>Proceed to checkout</p>
         </div>

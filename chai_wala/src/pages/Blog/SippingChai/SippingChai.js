@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import chai from "../../../Assets/Blog/blog2nd.webp";
 import "./SippingChai.scss";
 import Footer from "../../../components/Footer/Footer";
 import { axiosClient } from "../../../utils/axiosClient";

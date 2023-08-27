@@ -7,38 +7,39 @@
     color: #ff1493;
     font-size: 2.5em;
   }
-  .coupon {
-    width: 100%;
-    height: 5%;
+  .horizontal {
     background-color: #ff1493;
-    padding: 0.1px;
-    p {
-      text-align: left;
-      color: white;
-      font-size: 1.3em;
-      padding-left: 15px;
-    }
+    height: 0.5vh;
   }
-
-  .form {    
+  h3 {
+    font-size: 1.9em;
+    color: white;
+    background-color: #ff1493;
+    width: 16vw;
+    text-align: center;
+    padding: 1%;
+    border-radius: 15px;
+  }
+  .form {
+    display: flex;
     .name {
       display: flex;
       flex-flow: row wrap;
     }
-    .inputName{
-        width: 15.5vw;
+    .inputName {
+      width: 15.5vw;
     }
     .detail {
       display: flex;
       flex-flow: column wrap;
-      span{
+      span {
         color: red;
         font-weight: 900;
       }
     }
 
-    label{
-        margin-top: 10px;
+    label {
+      margin-top: 10px;
     }
     input {
       width: 35vw;
@@ -50,7 +51,7 @@
 
     #notes {
       width: 35vw;
-      height: 30vh;
+      height: 15vh;
       padding: 20px;
       background-color: rgba(128, 128, 128, 0.125);
       border: none;
@@ -62,12 +63,42 @@
       padding: 15px;
     }
 
-    .checkbox{
-       input{
+    .checkbox {
+      input {
         width: 1vw;
         padding: 0;
         margin: 0;
-       }
+      }
     }
+    .submit {
+      margin-top: 5vh;
+      width: 38.2vw;
+      color: #ff1493;
+      border: 2px solid #ff1493;
+      background-color: white;
+      font-weight: 600;
+      font-size: 1.2em;
+      cursor: pointer;
+    }
+    .submit:hover {
+      background-color: #ff1493;
+      color: white;
+    }
+  }
+  .secondPart {
+    margin-left: 3vw;
+  }
+}
+
+.length {
+  margin: 19vh 10vw;
+  color: #ff1493;
+  p {
+    color: white;
+    background-color: #ff1493;
+    padding: 15px;
+    font-weight: 600;
+    font-size: 1.1em;
+    margin-top: 10vh;
   }
 }

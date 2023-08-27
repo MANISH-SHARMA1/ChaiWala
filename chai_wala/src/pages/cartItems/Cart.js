@@ -1,13 +1,14 @@
-import React, { useState } from "react";
+import React from "react";
 import "./Cart.scss";
 import { RxCrossCircled } from "react-icons/rx";
 import { BsCartX } from "react-icons/bs";
 import CartItem from "./cartItem.js/CartItem";
 import { useSelector } from "react-redux";
+
 function Cart({ onClose }) {
   const cart = useSelector((state) => state.cartSlice.cart);
   const isCartEmpty = cart.length === 0;
-  let length = 0
+  let length = 0;
   cart.forEach((item) => {
     length += item.quantity;
   });
@@ -15,6 +16,7 @@ function Cart({ onClose }) {
   cart.forEach((item) => {
     totalAmount += item.quantity * item.price;
   });
+
   return (
     <>
       <div className="cart">
@@ -44,7 +46,7 @@ function Cart({ onClose }) {
                   <p>Total</p>
                 </div>
                 <div className="total">
-                  <p>₹{totalAmount}</p>
+                  <p>₹{totalAmount}.00</p>
                 </div>
               </div>
               <div className="checkout">
