@@ -1,12 +1,7 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Slide } from "react-slideshow-image";
 import "react-slideshow-image/dist/styles.css";
-import iTeaOne from "../../../../Assets/iTea/i-Tea1.webp";
-import iTeaTwo from "../../../../Assets/iTea/i-Tea2.webp";
-import iTeaThree from "../../../../Assets/iTea/i-Tea3.webp";
-import iTeaFour from "../../../../Assets/iTea/i-Tea4.webp";
-import iTeaFive from "../../../../Assets/iTea/i-Tea5.webp";
-import iTeaSix from "../../../../Assets/iTea/i-Tea6.webp";
+import { axiosClient } from "../../../../utils/axiosClient";
 
 const divStyle = {
   display: "flex",
@@ -16,19 +11,27 @@ const divStyle = {
   height: "400px",
 };
 
-const slideImages = [iTeaOne, iTeaTwo, iTeaThree, iTeaFour, iTeaFive, iTeaSix];
 function Hero() {
+  const [data, setData] = useState([]);
+
+  async function onLoad() {
+    const response = await axiosClient.get("iteaHero");
+    setData(response.data.result);
+  }
+  useEffect(() => {
+    onLoad();
+  }, []);
   return (
     <>
       <div className="slide-container" style={{ paddingTop: "9vh" }}>
         <Slide>
-          {slideImages.map((slideImage, index) => (
+          {data?.map((slideImage, index) => (
             <div key={index}>
               <div
                 className="divStyle"
                 style={{
                   ...divStyle,
-                  backgroundImage: `url(${slideImage})`,
+                  backgroundImage: `url(${slideImage.imgUrl})`,
                   height: "90vh",
                 }}
               ></div>

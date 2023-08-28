@@ -12,7 +12,11 @@ import {
   AiFillYoutube,
   AiFillLinkedin,
 } from "react-icons/ai";
+import { useNavigate } from "react-router";
+
 function Footer() {
+  const navigate = useNavigate();
+
   return (
     <>
       <div
@@ -46,11 +50,46 @@ function Footer() {
           <div className="block">
             <h1>Quick Links</h1>
             <ul>
-              <li id="ull">FAQ's</li>
-              <li id="ull">Terms Conditions</li>
-              <li id="ull">Privacy Policy</li>
-              <li id="ull">Cancellation Refund</li>
-              <li id="ull">Shipping Policy</li>
+              <li
+                id="ull"
+                onClick={() => {
+                  navigate("/faqs");
+                }}
+              >
+                FAQ's
+              </li>
+              <li
+                id="ull"
+                onClick={() => {
+                  navigate("/termsConditions");
+                }}
+              >
+                Terms Conditions
+              </li>
+              <li
+                id="ull"
+                onClick={() => {
+                  navigate("/privacyPolicy");
+                }}
+              >
+                Privacy Policy
+              </li>
+              <li
+                id="ull"
+                onClick={() => {
+                  navigate("/cancellationRefund");
+                }}
+              >
+                Cancellation Refund
+              </li>
+              <li
+                id="ull"
+                onClick={() => {
+                  navigate("/shipping");
+                }}
+              >
+                Shipping Policy
+              </li>
             </ul>
           </div>
           <div className="block">
