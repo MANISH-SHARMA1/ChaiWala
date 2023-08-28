@@ -132,12 +132,23 @@
       text-align: center;
       height: 5vh;
       width: 10vw;
+      cursor: pointer;
+    }
+    .btn:hover {
+      border: 1px solid rgb(65, 192, 241);
+      color: rgb(65, 192, 241);
     }
   }
 }
 
 .Container {
-  margin: 8%;
+  margin: -2% 8% 8%;
+  h1 {
+    margin-left: 2%;
+    color: #ff1493;
+    font-weight: 600;
+    font-size: 2.4em;
+  }
   .imgContainer {
     background-size: cover;
     cursor: pointer;

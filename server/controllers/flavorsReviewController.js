@@ -2,14 +2,15 @@ const { error, success } = require("../utils/responseWrapper");
 const reviewSchema = require("../models/FlavorsReview");
 
 const reviewController = async (req, res) => {
-  const { review, name, email } = req.body;
+  const {item, review, name, email } = req.body;
 
   try {
-    if (!review || !name || !email) {
+    if (!item || !review || !name || !email) {
       res.send(error(400, "All fields are required"));
     }
 
     const reviews = await reviewSchema.create({
+      item,
       review,
       name,
       email,

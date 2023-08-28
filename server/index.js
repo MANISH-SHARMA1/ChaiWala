@@ -1,4 +1,5 @@
 const express = require("express");
+
 const dotenv = require("dotenv");
 const dbConnect = require("./dbConnect");
 const authRouter = require("./routers/authRouter");
@@ -17,6 +18,8 @@ const iTeaRouter = require("./routers/iTeaRouter");
 const blogRouter = require("./routers/blogRouter");
 const flavorReviewRouter = require("./routers/flavorsReviewRouter");
 const orderRouter = require("./routers/orderRouter");
+const faqsRouter = require("./routers/faqsRouter");
+
 const morgan = require("morgan");
 const cookieParser = require("cookie-parser");
 const cors = require("cors");
@@ -35,6 +38,7 @@ app.use(
   })
 );
 
+//routes
 app.use("/auth", authRouter);
 app.use("/post", postsRouter);
 app.use("/enquiry", enquiryRouter);
@@ -51,12 +55,12 @@ app.use("/iTea", iTeaRouter);
 app.use("/blog", blogRouter);
 app.use("/reviewFlavor", flavorReviewRouter);
 app.use("/order", orderRouter);
-app.get("/", (req, res) => {
-  res.send("Ok from server");
-});
+app.use("/faqs", faqsRouter);
 
 const PORT = process.env.PORT || 4001;
+
 dbConnect();
+
 app.listen(PORT, () => {
   console.log(`listening on port: ${PORT}`);
 });

@@ -13,8 +13,10 @@ import {
   AiFillLinkedin,
 } from "react-icons/ai";
 import { useNavigate } from "react-router";
+
 function Footer() {
   const navigate = useNavigate();
+
   return (
     <>
       <div

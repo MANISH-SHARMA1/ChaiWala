@@ -21,6 +21,7 @@ function Home() {
     try {
       const response = await axiosClient.get("/home/");
       setData(response.data.result);
+      console.log("HomeData", data);
     } catch (error) {
       console.log(error);
     }

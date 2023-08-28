@@ -20,8 +20,7 @@ function EnquiryForm() {
 
   async function handleSubmit(e) {
     e.preventDefault();
-    console.log("hello from EnquiryDistributorship");
-    const distributor = await axiosClient.post("/distributorship/", {
+    await axiosClient.post("/distributorship/", {
       name,
       address,
       contactNumber,
@@ -37,8 +36,6 @@ function EnquiryForm() {
       godown,
       technicalFacilities,
     });
-
-    console.log("distributor: ", distributor);
   }
   return (
     <>

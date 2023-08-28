@@ -2,7 +2,6 @@ import React from "react";
 import "./Bonding.scss";
 
 function Bonding({ data }) {
-  console.log(data[0]?.cupImg);
 
   return (
     <>

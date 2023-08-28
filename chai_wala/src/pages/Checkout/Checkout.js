@@ -52,7 +52,6 @@ function Checkout() {
   function onLoad() {
     setSubTotal(totalAmount);
     setTotal(totalAmount);
-    console.log("totalAmount", totalAmount);
   }
   useEffect(() => {
     onLoad();
@@ -61,7 +60,7 @@ function Checkout() {
   async function handleSubmit(e) {
     e.preventDefault();
 
-    const data = await axiosClient.post("/order/", {
+    await axiosClient.post("/order/", {
       firstName,
       lastName,
       companyName,
@@ -84,8 +83,6 @@ function Checkout() {
       diffPinCode,
       orderNote,
     });
-
-    console.log("data: ", data);
   }
 
   return (

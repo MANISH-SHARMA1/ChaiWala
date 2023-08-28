@@ -4,6 +4,7 @@ import { RxCrossCircled } from "react-icons/rx";
 import { BsCartX } from "react-icons/bs";
 import CartItem from "./cartItem.js/CartItem";
 import { useSelector } from "react-redux";
+import { useNavigate } from "react-router";
 
 function Cart({ onClose }) {
   const cart = useSelector((state) => state.cartSlice.cart);
@@ -16,6 +17,8 @@ function Cart({ onClose }) {
   cart.forEach((item) => {
     totalAmount += item.quantity * item.price;
   });
+
+  const navigate = useNavigate();
 
   return (
     <>
@@ -49,7 +52,12 @@ function Cart({ onClose }) {
                   <p>₹{totalAmount}.00</p>
                 </div>
               </div>
-              <div className="checkout">
+              <div
+                className="checkout"
+                onClick={() => {
+                  navigate("/checkout");
+                }}
+              >
                 <p>CHECKOUT</p>
               </div>
             </div>

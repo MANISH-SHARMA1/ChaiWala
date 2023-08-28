@@ -65,7 +65,7 @@ function EnquiryForm() {
 
   async function handleSubmit(e) {
     e.preventDefault();
-    const user = await axiosClient.post("/enquiryForm/", {
+    await axiosClient.post("/enquiryForm/", {
       name,
       email,
       mobile,
@@ -79,7 +79,6 @@ function EnquiryForm() {
       age,
       question,
     });
-    console.log('user: ', user);
   }
   return (
     <>
@@ -91,13 +90,16 @@ function EnquiryForm() {
             <div className="raw">
               <div className="input">
                 <label htmlFor="name">Name</label>
-                <input type="text" onChange={(e)=> setName(e.target.value)} />
+                <input type="text" onChange={(e) => setName(e.target.value)} />
               </div>
               <div className="input">
                 <label htmlFor="email">
                   Email <span>*</span>
                 </label>
-                <input type="email" onChange={(e)=> setEmail(e.target.value)}/>
+                <input
+                  type="email"
+                  onChange={(e) => setEmail(e.target.value)}
+                />
               </div>
             </div>
             <div className="raw">
@@ -105,13 +107,20 @@ function EnquiryForm() {
                 <label htmlFor="mobile">
                   Mobile <span>*</span>
                 </label>
-                <input type="phone" onChange={(e)=> setMobile(e.target.value)}/>
+                <input
+                  type="phone"
+                  onChange={(e) => setMobile(e.target.value)}
+                />
               </div>
               <div className="input">
                 <label htmlFor="country">
                   Country <span>*</span>
                 </label>
-                <select name="country" id="country" onChange={(e)=> setCountry(e.target.value)}>
+                <select
+                  name="country"
+                  id="country"
+                  onChange={(e) => setCountry(e.target.value)}
+                >
                   {countries.map((country) => {
                     return <option value={country}>{country}</option>;
                   })}
@@ -123,7 +132,11 @@ function EnquiryForm() {
                 <label htmlFor="state">
                   State <span>*</span>
                 </label>
-                <select name="state" id="state" onChange={(e)=>setState(e.target.value)}>
+                <select
+                  name="state"
+                  id="state"
+                  onChange={(e) => setState(e.target.value)}
+                >
                   {states.map((state) => {
                     return <option value={state}>{state}</option>;
                   })}
@@ -133,7 +146,11 @@ function EnquiryForm() {
                 <label htmlFor="city">
                   City <span>*</span>
                 </label>
-                <input type="text" placeholder="Enter city name" onChange={(e)=>setCity(e.target.value)}/>
+                <input
+                  type="text"
+                  placeholder="Enter city name"
+                  onChange={(e) => setCity(e.target.value)}
+                />
               </div>
             </div>
             <div className="raw">
@@ -141,13 +158,20 @@ function EnquiryForm() {
                 <label htmlFor="pin">
                   Pin Code <span>*</span>
                 </label>
-                <input type="number" onChange={(e)=>setPinCode(e.target.value)}/>
+                <input
+                  type="number"
+                  onChange={(e) => setPinCode(e.target.value)}
+                />
               </div>
               <div className="input">
                 <label htmlFor="investment">
                   Investment Size <span>*</span>
                 </label>
-                <select name="investment" id="investment" onChange={(e)=>setInvestmentSize(e.target.value)}>
+                <select
+                  name="investment"
+                  id="investment"
+                  onChange={(e) => setInvestmentSize(e.target.value)}
+                >
                   <option value="select">---Select---</option>
                   <option value="20lacsTo25lacs">20 to 25 Lacs</option>
                   <option value="30lacsTo35lacs">30 to 35 Lacs</option>
@@ -160,7 +184,11 @@ function EnquiryForm() {
                 <label htmlFor="occupation">
                   Occupation <span>*</span>
                 </label>
-                <select name="occupation" id="occupation" onChange={(e)=> setOccupation(e.target.value)}>
+                <select
+                  name="occupation"
+                  id="occupation"
+                  onChange={(e) => setOccupation(e.target.value)}
+                >
                   <option value="select">--Select--</option>
                   <option value="student">Student</option>
                   <option value="job">Job</option>
@@ -172,7 +200,10 @@ function EnquiryForm() {
                 <label htmlFor="outlet">
                   Preferred Location for Outlet (City) <span>*</span>
                 </label>
-                <input type="text" onChange={(e)=> setOutlet(e.target.value)}/>
+                <input
+                  type="text"
+                  onChange={(e) => setOutlet(e.target.value)}
+                />
               </div>
             </div>
             <div className="raw">
@@ -180,17 +211,20 @@ function EnquiryForm() {
                 <label htmlFor="age">
                   Age <span>*</span>
                 </label>
-                <input type="text" onChange={(e)=>setAge(e.target.value)}/>
+                <input type="text" onChange={(e) => setAge(e.target.value)} />
               </div>
               <div className="input">
                 <label htmlFor="why">
                   Why MBA Chai Wala <span>*</span>
                 </label>
-                <input type="text" onChange={(e)=> setQuestion(e.target.value)}/>
+                <input
+                  type="text"
+                  onChange={(e) => setQuestion(e.target.value)}
+                />
               </div>
             </div>
             <div className="raw">
-              <input type="submit"  id="submit" />
+              <input type="submit" id="submit" />
             </div>
           </form>
         </div>

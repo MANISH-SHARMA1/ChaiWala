@@ -4,9 +4,12 @@ import { MdCall } from "react-icons/md";
 import { FaTelegramPlane } from "react-icons/fa";
 import { BsCart4 } from "react-icons/bs";
 import CartItems from "../pages/cartItems/Cart";
+import { useSelector } from "react-redux";
 function Navtop() {
   const [isShown, setIsShown] = useState(false);
- 
+
+  const cart = useSelector((state) => state.cartSlice.cart);
+  const length = cart.length === 0;
 
   return (
     <>
@@ -27,14 +30,16 @@ function Navtop() {
           <div id="top" className="vertical"></div>
         </div>
       </div>
-      <div
-        className="cartt"
-        onClick={() => {
-          setIsShown(!isShown);
-        }}
-      >
-        <BsCart4 />
-      </div>
+      {!length && (
+        <div
+          className="cartt"
+          onClick={() => {
+            setIsShown(!isShown);
+          }}
+        >
+          <BsCart4 />
+        </div>
+      )}
     </>
   );
 }

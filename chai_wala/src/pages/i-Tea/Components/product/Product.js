@@ -21,6 +21,8 @@ function Product() {
 
   const cart = useSelector((state) => state.cartSlice.cart);
   const quantity = cart.find((item) => item._id === params.id)?.quantity;
+  const descript = dataa.find((item) => item._id === params.id)?.description;
+  const item = dataa.find((item) => item._id === params.id)?.name;
 
   const handleClick = (e) => {
     if (e === "desc") {
@@ -55,6 +57,7 @@ function Product() {
   async function handleSubmit(e) {
     e.preventDefault();
     await axiosClient.post("/reviewFlavor/", {
+      item,
       review,
       name,
       email,
@@ -105,13 +108,7 @@ function Product() {
           </button>
           <button onClick={() => handleClick("review")}>Reviews</button>
         </div>
-        {description && (
-          <p>
-            Indulge in the rich and aromatic taste of i-Tea Premium - a premium
-            tea blend made from the finest ingredients. Savor each sip and
-            experience the perfect balance of flavor and aroma in every cup.
-          </p>
-        )}
+        {description && <p>{descript}</p>}
         {information && (
           <div id="table">
             <h1>Additional information</h1>
@@ -131,8 +128,8 @@ function Product() {
           <div>
             <h1>Reviews</h1>
             <p>
-              Be the first to review "i-Tea Premium" <br /> Your email address
-              will not be published. Required fields are marked.*
+              Be the first to review "{item}" <br /> Your email address will not
+              be published. Required fields are marked.*
             </p>
             <form onSubmit={handleSubmit} className="form">
               <div className="input">
@@ -161,6 +158,7 @@ function Product() {
         )}
       </div>
       <div className="Container">
+        <h1>Related Products</h1>
         {products?.map((e, index) => (
           <div
             key={index}

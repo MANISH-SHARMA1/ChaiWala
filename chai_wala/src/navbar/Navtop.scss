@@ -6,13 +6,13 @@
     background-color: white;
     position: fixed;
     z-index: 99;
+    display: flex;
     .vertical {
       background-color: #ff1493;
-      height: 41px;
+      height: 40.4px;
       width: 4px;
     }
     #top {
-      display: inline-block;
       #icon {
         color: #ff1493;
         font-size: 2em;
@@ -21,7 +21,6 @@
     }
     p {
       padding: 0 8vw;
-      //   margin-bottom: 5vh;
       margin-top: 0vh;
       font-weight: 700;
       font-size: 1.1em;

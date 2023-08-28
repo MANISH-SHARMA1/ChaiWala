@@ -16,15 +16,17 @@ function Hero() {
   const [data, setData] = useState([]);
 
   async function onLoad() {
-    const response = await axiosClient.get("/hero/");
-    console.log(response.data.result);
-    setData(response.data.result);
+    try {
+      const response = await axiosClient.get("/hero/");
+      setData(response.data.result);
+    } catch (e) {
+      console.log(e);
+    }
   }
 
   useEffect(() => {
     onLoad();
   }, []);
-  console.log("data", data);
   return (
     <>
       <div className="slide-container">
@@ -35,7 +37,7 @@ function Hero() {
                 className="divStyle"
                 style={{
                   ...divStyle,
-                  backgroundImage: `url(${slideImage.imgUrl})`,
+                  backgroundImage: `url(${slideImage?.imgUrl})`,
                   height: "90vh",
                 }}
               ></div>

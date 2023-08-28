@@ -1,6 +1,7 @@
 const mongoose = require("mongoose");
 
 const flavorsReview = mongoose.Schema({
+  item: String,
   review: String,
   name: String,
   email: String,

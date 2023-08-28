@@ -5,7 +5,6 @@ import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router";
 
 function CartItem({ cart }) {
-  console.log("cartItem", cart);
   const dispatch = useDispatch();
   const navigate = useNavigate();
   let totalAmount = 0;
@@ -63,10 +62,15 @@ function CartItem({ cart }) {
 
           <tr>
             <th>Total</th>
-            <td>₹{totalAmount+40}.00</td>
+            <td>₹{totalAmount + 40}.00</td>
           </tr>
         </table>
-        <div className="btnCheckout">
+        <div
+          className="btnCheckout"
+          onClick={() => {
+            navigate("/checkout");
+          }}
+        >
           <p>Proceed to checkout</p>
         </div>
       </div>

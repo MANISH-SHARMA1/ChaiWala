@@ -9,7 +9,7 @@ function Cart() {
   const navigate = useNavigate();
   const cart = useSelector((state) => state?.cartSlice.cart);
   const onEmpty = cart.length === 0;
-  console.log("cart", cart);
+
   return (
     <>
       {onEmpty ? (
