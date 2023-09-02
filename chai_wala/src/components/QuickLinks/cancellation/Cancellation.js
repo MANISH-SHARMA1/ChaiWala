@@ -1,5 +1,4 @@
 import React from "react";
-import Footer from "../../Footer/Footer";
 
 function Cancellation() {
   return (
@@ -25,7 +24,6 @@ function Cancellation() {
           </span>{" "}
         </p>
       </div>
-      <Footer />
     </>
   );
 }

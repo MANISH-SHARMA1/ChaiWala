@@ -1,6 +1,5 @@
 import React from "react";
 import "./ContactUs.scss";
-import Footer from "../../components/Footer/Footer";
 import { FaTelegram } from "react-icons/fa";
 import { SiGooglemaps } from "react-icons/si";
 import { FiPhoneCall } from "react-icons/fi";
@@ -60,7 +59,6 @@ function ContactUs() {
           </p>
         </div>
       </div>
-      <Footer />
     </>
   );
 }

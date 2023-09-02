@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import "./IndiaChai.scss";
-import Footer from "../../../components/Footer/Footer";
 import { axiosClient } from "../../../utils/axiosClient";
 
 function IndiaChai() {
@@ -84,7 +83,6 @@ function IndiaChai() {
           </div>
         </p>
       </div>
-      <Footer />
     </>
   );
 }

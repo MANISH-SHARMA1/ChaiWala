@@ -1,9 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./Blog.scss";
 import {axiosClient} from "../../utils/axiosClient"
-import Footer from "../../components/Footer/Footer";
 import { useNavigate } from "react-router";
-// import teaBackground from "../../Assets/Blog/I-TEA-2-jpg.webp";
 
 function Blog() {
   const navigate = useNavigate();
@@ -83,7 +81,6 @@ function Blog() {
           </div>
         </div>
       </div>
-      <Footer />
     </>
   );
 }

@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import "./Venture.scss";
-import Footer from "../../components/Footer/Footer";
 import { axiosClient } from "../../utils/axiosClient";
 
 function Venture() {
@@ -66,7 +65,6 @@ function Venture() {
             <img src={venture[3]?.imgUrl} alt="darkBeansImg" />
           </div>
         </div>
-        <Footer />
       </div>
     </>
   );

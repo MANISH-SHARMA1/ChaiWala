@@ -1,5 +1,4 @@
 import React from "react";
-import Footer from "../../Footer/Footer";
 
 function Shipping() {
   return (
@@ -40,7 +39,6 @@ function Shipping() {
           </p>
         </div>
       </div>
-      <Footer />
     </>
   );
 }

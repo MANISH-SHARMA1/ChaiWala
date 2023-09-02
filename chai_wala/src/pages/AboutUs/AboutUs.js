@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import "./AboutUs.scss";
-import Footer from "../../components/Footer/Footer";
 import AboutDesc from "../../components/AboutDesc/AboutDesc";
 import Bonding from "../../components/Bonding/Bonding";
 import { axiosClient } from "../../utils/axiosClient";
@@ -22,7 +21,6 @@ function AboutUs() {
         <img src={data[0]?.headerImg} alt="mbaAbout" />
         <Bonding data={data} />
         <AboutDesc data={data} />
-        <Footer />
       </div>
     </>
   );

@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import "./FAQs.scss";
-import Footer from "../../Footer/Footer";
 import { BsPlusCircleFill } from "react-icons/bs";
 import { BiSolidMinusCircle } from "react-icons/bi";
 
@@ -270,7 +269,6 @@ function FAQs() {
           )}
         </div>
       </div>
-      <Footer />
     </>
   );
 }

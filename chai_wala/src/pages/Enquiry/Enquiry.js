@@ -2,7 +2,6 @@ import React from "react";
 import "./Enquiry.scss";
 import map from "../../Assets/assets/map.png";
 import Form from "../../components/Form/Form";
-import Footer from "../../components/Footer/Footer";
 import CafeModels from "../../components/Models/CafeModels";
 
 function Enquiry() {
@@ -35,7 +34,6 @@ function Enquiry() {
         </div>
       </div>
       <CafeModels />
-      <Footer />
     </>
   );
 }

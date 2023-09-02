@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import "./Product.scss";
-import Footer from "../../../../components/Footer/Footer";
 import { axiosClient } from "../../../../utils/axiosClient";
 import { useNavigate, useParams } from "react-router";
 import { useDispatch, useSelector } from "react-redux";
@@ -176,7 +175,6 @@ function Product() {
           </div>
         ))}
       </div>
-      <Footer />
     </>
   );
 }

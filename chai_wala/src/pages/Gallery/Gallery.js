@@ -1,7 +1,6 @@
 import React from "react";
 import "./Gallery.scss";
 import gallery from "../../Assets/Gallery/Gallery-20-1-jpg.webp";
-import Footer from "../../components/Footer/Footer";
 
 function Gallery() {
   return (
@@ -24,7 +23,6 @@ function Gallery() {
           we create every day.
         </p>
       </div>
-      <Footer />
     </>
   );
 }

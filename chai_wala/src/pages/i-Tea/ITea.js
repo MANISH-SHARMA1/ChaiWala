@@ -5,7 +5,6 @@ import Infused from "./Components/Infused/Infused";
 import Inspiration from "./Components/Inspiration/Inspiration";
 import Description from "./Components/Description/Description";
 import EnquiryForm from "./Components/EnquiryForm/EnquiryForm";
-import Footer from "../../components/Footer/Footer";
 import { axiosClient } from "../../utils/axiosClient";
 
 function ITea() {
@@ -25,7 +24,6 @@ function ITea() {
         <Inspiration />
         <Description data={data} />
         <EnquiryForm />
-        <Footer />
       </div>
     </>
   );

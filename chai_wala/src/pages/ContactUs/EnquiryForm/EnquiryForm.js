@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import "./EnquiryForm.scss";
-import Footer from "../../../components/Footer/Footer";
 import { axiosClient } from "../../../utils/axiosClient";
 
 function EnquiryForm() {
@@ -229,7 +228,6 @@ function EnquiryForm() {
           </form>
         </div>
       </div>
-      <Footer />
     </>
   );
 }

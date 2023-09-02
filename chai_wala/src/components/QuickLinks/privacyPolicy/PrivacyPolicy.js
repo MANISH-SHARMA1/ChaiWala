@@ -1,5 +1,4 @@
 import React from "react";
-import Footer from "../../Footer/Footer";
 
 function PrivacyPolicy() {
   return (
@@ -239,7 +238,6 @@ function PrivacyPolicy() {
           </p>
         </div>
       </div>
-      <Footer />
     </>
   );
 }

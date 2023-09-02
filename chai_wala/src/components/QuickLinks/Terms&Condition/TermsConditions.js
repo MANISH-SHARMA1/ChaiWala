@@ -1,5 +1,4 @@
 import React from "react";
-import Footer from "../../Footer/Footer";
 
 function TermsConditions() {
   return (
@@ -124,7 +123,6 @@ function TermsConditions() {
           </p>
         </div>
       </div>
-      <Footer />
     </>
   );
 }

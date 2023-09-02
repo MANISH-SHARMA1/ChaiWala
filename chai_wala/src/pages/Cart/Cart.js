@@ -1,6 +1,5 @@
 import React from "react";
 import "./Cart.scss";
-import Footer from "../../components/Footer/Footer";
 import CartItem from "./CartItem";
 import { useSelector } from "react-redux";
 import { useNavigate } from "react-router";
@@ -30,7 +29,6 @@ function Cart() {
         </div>
       )}
 
-      <Footer />
     </>
   );
 }

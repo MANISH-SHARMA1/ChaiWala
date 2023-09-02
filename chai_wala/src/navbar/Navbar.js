@@ -2,6 +2,7 @@ import "./Navbar.scss";
 import { Outlet, Link } from "react-router-dom";
 import Navtop from "./Navtop";
 import logo from "../Assets/navbar/logo.png";
+import Footer from "../components/Footer/Footer";
 const Navbar = () => {
   return (
     <>
@@ -78,6 +79,7 @@ const Navbar = () => {
         </nav>
       </div>
       <Outlet />
+      <Footer/>
     </>
   );
 };

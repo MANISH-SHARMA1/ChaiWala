@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import "./SippingChai.scss";
-import Footer from "../../../components/Footer/Footer";
 import { axiosClient } from "../../../utils/axiosClient";
 function SippingChai() {
   const [data, setData] = useState([]);
@@ -85,7 +84,6 @@ function SippingChai() {
           </div>
         </p>
       </div>
-      <Footer />
     </>
   );
 }

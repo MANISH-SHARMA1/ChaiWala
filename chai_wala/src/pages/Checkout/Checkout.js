@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import "./Checkout.scss";
-import Footer from "../../components/Footer/Footer";
 import Table from "./table/Table";
 import { axiosClient } from "../../utils/axiosClient.js";
 import { useSelector } from "react-redux";
@@ -328,7 +327,6 @@ function Checkout() {
           <p>Sorry! Can't checkout while cart is empty.</p>
         </div>
       )}
-      <Footer />
     </>
   );
 }

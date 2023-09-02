@@ -4,7 +4,6 @@ import CoFounder from "../../components/Founders/CoFounder";
 import Introduction from "../../components/Introduction/Introduction";
 import Coolest from "../../components/Coolest/Coolest";
 import OurStory from "../../components/OurStory/OurStory";
-import Footer from "../../components/Footer/Footer";
 import Models from "../../components/Models/Models";
 import Discover from "../../components/Discover/Discover";
 import Journey from "../../components/Journey/Journey";
@@ -44,7 +43,6 @@ function Home() {
       <Models data={data[8]}/>
       <OurStory data={data[7]} />
       <YtFeed />
-      <Footer />
     </>
   );
 }
