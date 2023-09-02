@@ -1,7 +1,6 @@
 import React from "react";
 import "./Career.scss";
 import FormCareer from "../../components/FormCareer/FormCareer";
-import Footer from "../../components/Footer/Footer";
 
 function Career() {
   return (
@@ -21,7 +20,6 @@ function Career() {
           </p>
         </div>
         <FormCareer />
-        <Footer />
       </div>
     </>
   );
